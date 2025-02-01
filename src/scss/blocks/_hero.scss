@@ -1,0 +1,67 @@
+@use "../helpers" as *;
+
+.hero {
+  position: relative;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @media (max-width: rem(767)) {
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    align-items: center;
+    @media (max-width: rem(767)) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__subtitle {
+    @include fluid-text(250, 80);
+    font-family: var(--font-family-accent);
+    font-weight: 700;
+    color: var(--color-light);
+    text-shadow: var(--text-shadow);
+    line-height: 1.1;
+    &-text {
+      &:last-child {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 1rem;
+        background-image: url("../img/hero-subtitle-2.png");
+        background-repeat: no-repeat;
+        background-position: 89%;
+        background-size: 25%;
+        &::before {
+          content: "";
+          width: rem(200);
+          height: rem(180);
+          background-image: url("../img/hero-subtitle-3.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          @media (max-width: rem(480)) {
+            width: rem(140);
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    padding: 0 rem(8);
+    display: inline-flex;
+    margin-bottom: rem(48);
+    background-color: var(--color-accent);
+    font-family: var(--font-family-accent);
+    font-weight: 700;
+    color: var(--color-darken);
+    text-shadow: var(--text-shadow);
+  }
+  &__image {
+    @include mobile {
+      order: -1;
+    }
+  }
+}

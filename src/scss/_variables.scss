@@ -1,23 +1,27 @@
-@use 'helpers' as *;
+@use "helpers" as *;
 
 :root {
   --color-light: #ffffff;
-  --color-dark: #4D4D4D;
-  --color-bg: #A8D8FF;
+  --color-dark: #000000;
+  --color-dark-rgba: rgba(0, 0, 0, 0.25);
+  --color-darken: #4d4d4d;
+  --color-bg: #a8d8ff;
   --color-gray: #98989a;
-  --color-accent: #FCCE1D;
+  --color-accent: #fcce1d;
+  --color-decor-blur: #e1eefe;
 
-  --border: #{rem(1)} solid var(--color-dark-15);
+  --border: #{rem(1)} solid var(--color-gray);
+  --text-shadow: 4px 4px 4px var(--color-dark-rgba);
+  --box-shadow: 0 4px 4px 0 var(--color-dark-rgba);
+  --font-family-base: "PT Sans Narrow", sans-serif;
+  --font-family-accent: "Buyan", sans-serif;
 
-  --font-family-base: 'PT Sans Narrow', sans-serif;
-  --font-family-accent: 'Buyan', sans-serif;
-
-  --container-width: #{rem(1200)};
+  --container-width: #{rem(1600)};
   --container-padding-x: #{rem(16)};
 
   --transition-duration: 0.2s;
 
-  //@include laptop {
-  //  --container-width: #{rem(1280)};
-  //}
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
 }

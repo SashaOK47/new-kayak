@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+  @include('partials/head.html')
 
-@include('partials/head.html')
-
-<body>
+  <body>
     @include('partials/header.html')
     <main class="main">
-    <h1>сплавы на каяках и сапбордах</h1>
-<!--        <picture>-->
-<!--            <source srcset="img/cover.webp" type="image/webp">-->
-<!--            <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">-->
-<!--        </picture>-->
+      @include('partials/hero.html') @include('partials/route.html')
+      @include('partials/boats.html') @include('partials/work.html')
+      <!--        <picture>-->
+      <!--            <source srcset="img/cover.webp" type="image/webp">-->
+      <!--            <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">-->
+      <!--        </picture>-->
     </main>
     @include('partials/footer.html')
-</body>
-
+    <!-- @include('partials/modal-feedback.html') -->
+  </body>
 </html>

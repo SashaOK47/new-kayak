@@ -1,1 +1,75 @@
-// ваш код
+@use "helpers" as *;
+
+.header {
+  //backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(100) rem(200);
+
+  @keyframes scrolling-header {
+    to {
+      box-shadow: 0 0 1rem 0 #000000;
+    }
+  }
+  &__inner {
+    padding-block: rem(12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  &__overlay {
+    display: contents;
+    @media (max-width: rem(980)) {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 3rem;
+      padding: 1rem;
+      transition-duration: var(--transition-duration);
+      background-image: url("../img/menu.png");
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-color: #a8d8ff;
+
+      &:not(.is-active) {
+        opacity: 0;
+        visibility: hidden;
+        translate: 100%;
+      }
+    }
+  }
+  &__menu-list {
+    display: flex;
+    column-gap: rem(20);
+    @media (max-width: rem(980)) {
+      flex-direction: column;
+    }
+  }
+  &__menu-link {
+    padding: rem(10) rem(17);
+    border-radius: rem(30);
+    white-space: nowrap;
+    @media (max-width: rem(980)) {
+      font-size: rem(24);
+    }
+    @include mobile-above {
+      padding: rem(6) rem(8);
+    }
+    @include hover() {
+      background-color: var(--color-accent);
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: rem(24);
+  }
+}

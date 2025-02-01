@@ -1,1 +1,3 @@
-console.log(5);
+import burgerMenu from "./modules/burger-menu.js";
+
+burgerMenu();

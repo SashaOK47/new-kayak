@@ -1,0 +1,24 @@
+@use "helpers" as *;
+
+.boats {
+  &__inner {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+  &__content {
+    margin-bottom: rem(40);
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+    justify-content: space-between;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 10rem;
+  }
+  &__item {
+    text-align: center;
+  }
+}

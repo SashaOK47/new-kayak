@@ -1,0 +1,58 @@
+@use "../helpers" as *;
+
+.route {
+  &__inner {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+  &__subtitle {
+    margin-bottom: rem(48);
+    @include fluid-text(20, 16);
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    @media (max-width: rem(767)) {
+      grid-template-columns: 1fr;
+      margin-bottom: rem(48);
+    }
+  }
+  &__info {
+    max-width: rem(400);
+  }
+  &__table {
+    @include fluid-text(24, 16);
+    text-transform: uppercase;
+    width: 100%;
+    tr {
+      margin-bottom: rem(12);
+      border-bottom: var(--border);
+      display: flex;
+      justify-content: space-between;
+    }
+    td {
+      padding-top: rem(6);
+      padding-bottom: rem(6);
+      &:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+  &__map {
+    &-frame {
+      margin-bottom: rem(10);
+    }
+    &-info {
+      p {
+        margin: 0;
+        &:first-child {
+          margin-bottom: rem(10);
+        }
+        span {
+          background-color: var(--color-accent);
+        }
+      }
+    }
+  }
+}

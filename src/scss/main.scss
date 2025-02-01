@@ -1,8 +1,18 @@
-@use 'normalize';
-@use 'fonts';
-@use 'variables';
-@use 'utils';
-@use 'globals';
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
 
 // подключения компонентов страницы
-@use './blocks/header';
+@use "./blocks/header";
+@use "./blocks/burger-menu";
+@use "./blocks/button";
+@use "./blocks/soc1als";
+@use "./blocks/phone";
+@use "./blocks/hero";
+@use "./blocks/route";
+@use "./blocks/boats";
+@use "./blocks/work";
+
+@use "./blocks/modal-feedback";

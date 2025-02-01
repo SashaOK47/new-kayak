@@ -1,0 +1,12 @@
+@use "helpers" as *;
+.soc1als {
+  &__list {
+    display: flex;
+    column-gap: rem(8);
+  }
+  &__link {
+    @include hover() {
+      scale: 1.1;
+    }
+  }
+}
