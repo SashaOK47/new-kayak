@@ -21,6 +21,9 @@ main {
 section {
   position: relative;
   margin-bottom: rem(120);
+  @media (max-width: rem(480)) {
+    margin-bottom: rem(80);
+  }
   &::after {
     content: "";
     width: 100%;
