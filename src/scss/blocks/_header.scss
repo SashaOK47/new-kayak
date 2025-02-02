@@ -38,6 +38,10 @@
       background-position: bottom right;
       background-repeat: no-repeat;
       background-color: #a8d8ff;
+      @media (max-width: rem(480)) {
+        background-size: 60%;
+        row-gap: 1rem;
+      }
 
       &:not(.is-active) {
         opacity: 0;
@@ -60,7 +64,7 @@
     @media (max-width: rem(980)) {
       font-size: rem(24);
     }
-    @include mobile-above {
+    @media (max-width: rem(767)) {
       padding: rem(6) rem(8);
     }
     @include hover() {
@@ -71,5 +75,10 @@
     display: flex;
     align-items: center;
     column-gap: rem(24);
+    @media (max-width: rem(480)) {
+      flex-direction: column-reverse;
+      align-items: start;
+      row-gap: rem(24);
+    }
   }
 }
