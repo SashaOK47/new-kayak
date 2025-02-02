@@ -1,1 +1,1 @@
-(()=>{"use strict";(()=>{const e=document.querySelector(".burger-menu"),t=document.querySelector(".header__overlay");e.addEventListener("click",(()=>{t.classList.toggle("is-active")}))})()})();
+(()=>{"use strict";(()=>{const e=document.querySelector(".burger-menu"),t=document.querySelector(".header__overlay"),c=document.querySelectorAll(".header__menu-link");e.addEventListener("click",(()=>{t.classList.toggle("is-active"),document.documentElement.classList.toggle("no-scroll")})),c.forEach((e=>{e.addEventListener("click",(()=>{t.classList.remove("is-active")}))}))})()})();
