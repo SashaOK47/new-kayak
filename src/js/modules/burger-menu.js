@@ -11,6 +11,7 @@ const burgerMenu = () => {
     links.forEach(link => {
         link.addEventListener('click', () => {
             headerOverlay.classList.remove('is-active');
+            document.documentElement.classList.remove('no-scroll');
         })
     })
 }
