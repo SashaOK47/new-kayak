@@ -3,15 +3,10 @@
     <h2 class="route__title">лодки</h2>
     <p class="route__subtitle">Аренда современного спортивного инвентаря</p>
     <div class="boats__content">
-      <div>
-        <img
-          class="boats__image"
-          width="400"
-          height="400"
-          src="./img/boats-img2.png"
-          alt=""
-        />
-      </div>
+      <picture>
+        <source srcset="img/boats-img.webp" type="image/webp">
+        <img class="boats__image" loading="lazy" src="img/boats-img.png" width="400" height="400" alt="">
+      </picture>
       <ul class="boats__list">
         <li class="boats__item">
           <h3 class="boats__item-title">

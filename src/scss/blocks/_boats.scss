@@ -11,14 +11,29 @@
     align-items: center;
     column-gap: rem(40);
     justify-content: space-between;
+    @media (max-width: rem(767)) {
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: rem(40);
+    }
   }
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 10rem;
+    @media (max-width: rem(767)) {
+      row-gap: 5rem;
+    }
+    @media (max-width: rem(480)) {
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     text-align: center;
+    &-title {
+      margin-bottom: rem(24);
+      color: var(--color-dark);
+    }
   }
 }
