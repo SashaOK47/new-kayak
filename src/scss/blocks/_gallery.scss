@@ -7,10 +7,17 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-    grid-auto-rows: 543px;
-    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    @media (max-width: rem(980)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: rem(767)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: rem(480)) {
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     //height: 264px;

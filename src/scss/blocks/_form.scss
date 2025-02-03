@@ -1,0 +1,95 @@
+@use "../helpers" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  row-gap: rem(16);
+  &__label {
+    width: 100%;
+  }
+  &__input {
+    height: rem(56);
+    font: inherit;
+    color: var(--color-dark);
+    padding: rem(16) rem(24);
+    background-color: var(--color-light);
+    width: 100%;
+    border: none;
+    &::placeholder {
+      color: var(--color-dark);
+      font-weight: 300;
+    }
+  }
+  &__textarea {
+    min-height: rem(108);
+    font: inherit;
+    color: var(--color-dark);
+    padding: rem(16) rem(24);
+    width: 100%;
+    resize: none;
+    background-color: var(--color-light);
+    border: none;
+    &::placeholder {
+      color: var(--color-dark);
+      font-weight: 300;
+    }
+  }
+  &__checkbox {
+    appearance: none;
+    position: absolute;
+    &:focus-visible {
+      outline: none;
+    }
+    &:focus-visible + .form__fake-checkbox {
+      outline: rem(2) dashed var(--color-light);
+      outline-offset: rem(4);
+      transition-duration: 0s !important;
+    }
+    &:checked + .form__fake-checkbox {
+      &::after, &::before {
+        opacity: 1;
+      }
+    }
+  }
+  &__fake-checkbox {
+    margin-right: 1rem;
+    display: inline-block;
+    width: rem(20);
+    height: rem(20);
+    position: relative;
+    //border: 1px solid var(--color-dark);
+    background-color: var(--color-light);
+    cursor: pointer;
+    @media (max-width: rem(480)) {
+      width: rem(16);
+      height: rem(16);
+      margin-right: .5rem;
+    }
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: .1rem;
+      background-color: var(--color-dark);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &::before {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+  &__privacy {
+    @include fluid-text(20, 14);
+    &-link {
+      background-color: var(--color-accent);
+    }
+  }
+}
