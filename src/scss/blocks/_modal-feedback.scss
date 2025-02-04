@@ -1,6 +1,19 @@
+@use "helpers" as *;
+
 .modal-feedback {
   position: fixed;
   inset: 0;
-  z-index: 100;
-  background-color: red;
+  background-color: var(--color-modal);
+  z-index: 11;
+  &__inner {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    padding-inline: rem(45);
+    background-color: var(--color-bg);
+    background-image: url('../img/modal-feedback.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 40%;
+    @include abs-center;
+  }
 }
