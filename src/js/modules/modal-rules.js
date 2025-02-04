@@ -8,7 +8,6 @@ const modalRules = () => {
         document.documentElement.classList.add('no-scroll');
     })
     modalRulesPopup.addEventListener('click', (e) => {
-        console.log(e.target)
         if(e.target && e.target === modalRulesPopup) {
             modalRulesPopup.style.display = 'none';
             document.documentElement.classList.remove('no-scroll');
