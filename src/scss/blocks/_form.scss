@@ -94,7 +94,11 @@
   &__privacy {
     @include fluid-text(20, 14);
     &-link {
+      padding-inline: rem(10);
       background-color: var(--color-accent);
+      @include hover() {
+        color: var(--color-light);
+      }
     }
   }
 }

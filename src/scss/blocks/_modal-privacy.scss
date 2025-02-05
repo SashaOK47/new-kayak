@@ -24,7 +24,6 @@
   }
   &__subtitle {
     margin-bottom: rem(48);
-    //max-width: rem(520);
     @include fluid-text(20, 16);
   }
   &__list {
@@ -34,9 +33,6 @@
   &__item {
     &-title {
       margin-top: 1rem;
-      //&:not(:first-child) {
-      //  margin-top: 1rem;
-      //}
       font-weight: 700;
       text-transform: uppercase;
     }
