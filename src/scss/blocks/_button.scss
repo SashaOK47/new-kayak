@@ -13,6 +13,15 @@
   background-color: var(--color-darken);
   border: none;
 
+  &:disabled {
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+    &:hover {
+      background-color: var(--color-gray);
+      color: var(--color-light);
+    }
+  }
+
   @include hover() {
     background-color: var(--color-accent);
     color: var(--color-darken);

@@ -6,9 +6,13 @@
   align-items: start;
   width: 100%;
   row-gap: rem(16);
+  overflow: hidden;
   &--feedback {
     .form__label {
       width: 70%;
+      @media (max-width: rem(767)) {
+        width: 100%;
+      }
     }
   }
   &__label {
@@ -67,7 +71,7 @@
     //border: 1px solid var(--color-dark);
     background-color: var(--color-light);
     cursor: pointer;
-    @media (max-width: rem(480)) {
+    @media (max-width: rem(767)) {
       width: rem(16);
       height: rem(16);
       margin-right: .5rem;
@@ -99,6 +103,14 @@
       @include hover() {
         color: var(--color-light);
       }
+      @media(max-width: rem(480)) {
+        margin-left: 1.5rem;
+      }
     }
+  }
+  &__error {
+    display: inline flex;
+    margin-top: rem(8);
+    background-color: red;
   }
 }

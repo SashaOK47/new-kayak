@@ -35,5 +35,8 @@
     "sass": "^1.83.0",
     "webpack": "^5.97.1",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "imask": "^7.6.1"
   }
 }
