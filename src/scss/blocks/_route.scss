@@ -6,13 +6,16 @@
     padding-bottom: rem(40);
   }
   &__subtitle {
-    margin-bottom: rem(48);
     @include fluid-text(20, 16);
+
+    margin-bottom: rem(48);
+    color: var(--text);
   }
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
+    color: var(--text);
     @media (max-width: rem(767)) {
       grid-template-columns: 1fr;
       margin-bottom: rem(48);
@@ -51,6 +54,7 @@
         }
         span {
           background-color: var(--color-accent);
+          color: var(--color-darken);
         }
       }
     }

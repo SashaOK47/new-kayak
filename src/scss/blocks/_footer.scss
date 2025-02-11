@@ -9,6 +9,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     border-bottom: var(--border);
+    color: var(--text);
     @media (max-width: rem(767)) {
       grid-template-columns: 2fr 1fr;
     }
@@ -105,6 +106,8 @@
     margin-bottom: rem(16);
     padding-inline: rem(6);
     background-color: var(--color-accent);
+    color: var(--color-darken);
+    font-weight: 700;
     @include hover() {
       color: var(--color-light);
     }
@@ -120,6 +123,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--text);
   }
   &__copyright {
     @include fluid-text(16, 14);

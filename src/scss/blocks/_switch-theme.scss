@@ -1,0 +1,47 @@
+.switch-theme {
+  display: flex;
+  justify-content: center;
+
+  &__input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__label {
+    position: relative;
+    width: 64px;
+    height: 32px;
+    border: 2px solid var(--bg-indicate);
+    //border: 2px solid var(--color-accent);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &__block {
+    position: absolute;
+    left: var(--left-position);
+    transform: rotate(var(--rotate-angle));
+    transition: all 0.5s ease;
+  }
+
+  &__indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transition: background-color 1s ease;
+    color: var(--indicate);
+    background-color: var(--bg-indicate);
+    cursor: pointer;
+
+    svg {
+      path {
+        fill: var(--color-svg);
+      }
+    }
+  }
+}

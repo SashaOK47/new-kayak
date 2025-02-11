@@ -20,9 +20,37 @@
   --container-width: #{rem(1600)};
   --container-padding-x: #{rem(16)};
 
-  --transition-duration: 0.2s;
+  --transition-duration: .5s;
+  --transition-duration-hover: 0.2s;
+
+  --transparent: transparent;
+
+  // theme light
+  --background: var(--color-bg);
+  --text: var(--color-dark);
+  --header-bg: rgba(255, 255, 255, 0.3);
+  --decor-blur: var(--color-decor-blur);
+  --rotate-angle: 0deg;
+  --indicate: #e6e6e6;
+  --bg-indicate: #64b5f6;
+  --left-position: 5px;
+  --color-svg: var(--color-light);
+  --color-burger: var(--color-dark);
 
   @include laptop {
     --container-width: #{rem(1280)};
   }
+}
+
+// theme dark
+:root[data-theme="dark"] {
+  --background: url("../img/space.jpg");
+  --text: var(--color-light);
+  --header-bg: rgba(0, 0, 0, 0.9);
+  --decor-blur: var(--transparent);
+  --rotate-angle: 360deg;
+  --bg-indicate: var(--color-accent);
+  --left-position: 35px;
+  --color-svg: var(--color-dark);
+  --color-burger: var(--color-light);
 }

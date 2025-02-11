@@ -4,11 +4,13 @@
   display: none;
   @media (max-width: 980px) {
     @include square(rem(34));
+    position: relative;
+    z-index: 12;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     padding: rem(8.5) rem(4.25);
-    color: var(--color-dark);
+    color: var(--color-burger);
     background-color: transparent;
     border: none;
 
@@ -37,7 +39,7 @@
       width: 100%;
       height: rem(2);
       border-radius: 1rem;
-      transition-duration: var(--transition-duration);
+      transition: rotate var(--transition-duration-hover);
     }
   }
 }

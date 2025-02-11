@@ -97,14 +97,14 @@
   }
   &__privacy {
     @include fluid-text(20, 14);
+
+    display: inline-block;
     &-link {
-      padding-inline: rem(10);
+      font-weight: 700;
       background-color: var(--color-accent);
+      color: var(--color-darken);
       @include hover() {
         color: var(--color-light);
-      }
-      @media(max-width: rem(480)) {
-        margin-left: 1.5rem;
       }
     }
   }

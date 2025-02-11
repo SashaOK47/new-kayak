@@ -2,7 +2,7 @@
 
 .header {
   //backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--header-bg);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -38,6 +38,7 @@
       background-position: bottom right;
       background-repeat: no-repeat;
       background-color: #a8d8ff;
+      z-index: 11;
       @media (max-width: rem(480)) {
         background-size: 60%;
         row-gap: 1rem;

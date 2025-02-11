@@ -80,7 +80,6 @@ const sendMessage = () => {
             console.log(e);
         }
     }
-
     function successMessage() {
         return `
           <div class="form__success">

@@ -11,6 +11,11 @@ body {
   font-family: var(--font-family-base);
   color: var(--color-dark);
   background-color: var(--color-bg);
+  background-image: var(--background);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: all 1s ease;
   display: flex;
   flex-direction: column;
 }
@@ -28,7 +33,7 @@ section {
     content: "";
     width: 100%;
     height: rem(80);
-    background: var(--color-decor-blur);
+    background: var(--decor-blur);
     position: absolute;
     left: 0;
     bottom: rem(-80);
@@ -58,7 +63,7 @@ input,
 textarea,
 select,
 svg * {
-  transition-duration: var(--transition-duration);
+  transition-duration: var(--transition-duration-hover);
 }
 
 a {

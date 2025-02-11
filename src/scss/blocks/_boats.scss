@@ -5,6 +5,12 @@
     padding-top: rem(40);
     padding-bottom: rem(40);
   }
+  &__subtitle {
+    @include fluid-text(20, 16);
+
+    margin-bottom: rem(48);
+    color: var(--text);
+  }
   &__content {
     margin-bottom: rem(40);
     display: flex;
@@ -33,7 +39,7 @@
     text-align: center;
     &-title {
       margin-bottom: rem(24);
-      color: var(--color-dark);
+      color: var(--text);
     }
   }
 }

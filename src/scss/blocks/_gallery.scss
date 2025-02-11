@@ -6,9 +6,12 @@
     padding-bottom: rem(40);
   }
   &__subtitle {
+    @include fluid-text(20, 16);
+
     margin-bottom: rem(48);
     max-width: rem(520);
-    @include fluid-text(20, 16);
+    color: var(--text);
+    transition: var(--transition-duration);
   }
   &__list {
     display: grid;
