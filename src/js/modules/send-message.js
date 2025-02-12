@@ -43,7 +43,7 @@ const sendMessage = () => {
     })
 
     function send(form) {
-        let message = `Сообщение с сайта:   <strong>https://brest-kayak.by/</strong>\n`;
+        let message = `Сообщение с сайта:   <strong>https://sashaok47.github.io/new-kayak/</strong>\n`;
         message += `Отправитель:   <strong>${form.name.value}</strong>\n`;
         message += `Телефон:   <strong>${form.phone.value}</strong>\n`;
         message += `Сообщение:   <strong>${form.message.value}</strong>\n`;
