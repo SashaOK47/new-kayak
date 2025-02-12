@@ -36,6 +36,8 @@
   --left-position: 5px;
   --color-svg: var(--color-light);
   --color-burger: var(--color-dark);
+  --color-burger-menu: var(--color-bg);
+  --color-bg-modal: #a8d8ff;
 
   @include laptop {
     --container-width: #{rem(1280)};
@@ -53,4 +55,6 @@
   --left-position: 35px;
   --color-svg: var(--color-dark);
   --color-burger: var(--color-light);
+  --color-burger-menu: var(--color-dark);
+  --color-bg-modal: #2d2d2d;
 }

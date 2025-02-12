@@ -10,9 +10,10 @@
     position: relative;
     padding-top: rem(20);
     padding-bottom: rem(20);
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-modal);
     max-height: rem(800);
     overflow-y: auto;
+    color: var(--text);
     @media(max-width: rem(1200)) {
       overflow-y: auto;
     }
