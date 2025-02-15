@@ -13,7 +13,7 @@
   }
   &__content {
     display: grid;
-    grid-template-columns: 55% 1fr;
+    grid-template-columns: 60% 1fr;
     column-gap: rem(200);
     color: var(--text);
     @media (max-width: rem(980)) {

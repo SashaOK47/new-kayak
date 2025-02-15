@@ -18,8 +18,15 @@
                 <button class="button certificate__button js-feedback">заказать сертификат</button>
             </div>
             <picture>
-                <source srcset="img/certificate.webp" type="image/webp">
-                <img class="certificate__image" loading="lazy" src="img/certificate.jpg" width="778" height="366" alt="Сертификат от Брест Каяк">
+                <source data-srcset="img/certificate.webp" type="image/webp">
+                <img
+                    class="certificate__image lazyload"
+                    loading="lazy"
+                    data-src="img/certificate.jpg"
+                    width="778"
+                    height="366"
+                    alt="Сертификат от Брест Каяк"
+                >
             </picture>
         </div>
     </div>

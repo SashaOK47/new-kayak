@@ -4,8 +4,15 @@
         <p class="feedback__subtitle">Задайте нам любой вопрос, напишите или сделайте заказ. Наши менеджеры ответят вам в ближайшее время.</p>
         <div class="feedback__content">
             <picture>
-                <source srcset="img/feedback.webp" type="image/webp">
-                <img class="faq__image" loading="lazy" src="img/feedback.png" width="475" height="400" alt="">
+                <source data-srcset="img/feedback.webp" type="image/webp">
+                <img
+                    class="feedback__image lazyload"
+                    loading="lazy"
+                    data-src="img/feedback.png"
+                    width="475"
+                    height="400"
+                    alt=""
+                >
             </picture>
             <div class="feedback__info">
                 <form class="feedback__form form">
