@@ -1,5 +1,7 @@
-const faq = () => {
+export const faq = () => {
+
     const faqItem = document.querySelectorAll(".faq__item");
+
     faqItem.forEach((el) => {
         el.addEventListener("click", (e) => {
             e.preventDefault();
@@ -14,5 +16,3 @@ const faq = () => {
         });
     });
 }
-
-export default faq;

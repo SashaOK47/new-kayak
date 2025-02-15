@@ -6,10 +6,14 @@
   align-items: start;
   width: 100%;
   row-gap: rem(16);
-  overflow: hidden;
   &--feedback {
     .form__label {
       width: 70%;
+      &-checkbox {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+      }
       @media (max-width: rem(767)) {
         width: 100%;
       }
@@ -17,9 +21,13 @@
   }
   &__label {
     width: 100%;
+    &-checkbox {
+      display: flex;
+      align-items: center;
+    }
   }
   &__input {
-    height: rem(56);
+    //height: rem(56);
     font: inherit;
     color: var(--color-dark);
     padding: rem(16) rem(24);
@@ -71,11 +79,6 @@
     //border: 1px solid var(--color-dark);
     background-color: var(--color-light);
     cursor: pointer;
-    @media (max-width: rem(767)) {
-      width: rem(16);
-      height: rem(16);
-      margin-right: .5rem;
-    }
     &::after, &::before {
       content: "";
       position: absolute;
@@ -96,7 +99,7 @@
     }
   }
   &__privacy {
-    @include fluid-text(20, 14);
+    @include fluid-text(18, 14);
 
     display: inline-block;
     &-link {
@@ -109,8 +112,7 @@
     }
   }
   &__error {
-    display: inline flex;
-    margin-top: rem(8);
-    background-color: red;
+    margin-top: .5rem;
+    color: red;
   }
 }

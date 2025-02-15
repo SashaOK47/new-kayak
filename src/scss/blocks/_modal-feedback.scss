@@ -29,6 +29,7 @@
     }
     @media (max-width: rem(767)) {
       width: 90%;
+      padding-inline: rem(12);
     }
   }
   &__close {

@@ -6,22 +6,22 @@
             <form class="modal-feedback__form form form--feedback">
                 <label class="form__label">
                     <input class="form__input" type="text" name="name" placeholder="Имя..."/>
+                    <span class="form__error"></span>
                 </label>
                 <label class="form__label">
-                    <input class="form__input" type="tel" name="phone" placeholder="Телефон..."/>
+                    <input class="form__input" type="text" name="phone" placeholder="Телефон..."/>
+                    <span class="form__error"></span>
                 </label>
                 <label class="form__label">
                     <textarea class="form__textarea" name="message" placeholder="Ваше сообщение..."></textarea>
-                    <span class="form__message"></span>
+                    <span class="form__error"></span>
                 </label>
-                <p>
-                    <label class="form__label">
+                    <label class="form__label-checkbox">
                         <input class="form__checkbox" type="checkbox" name="privacy">
                         <span class="form__fake-checkbox"></span>
                         <span class="form__privacy">Вы соглашаетесь с
                             <a href="#" class="form__privacy-link js-privacy">условиями политики конфиденциальности</a></span>
                     </label>
-                </p>
                 <button class="form__button button" disabled>Отправить сообщение</button>
 
             </form>

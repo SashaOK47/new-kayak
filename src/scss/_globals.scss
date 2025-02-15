@@ -15,10 +15,46 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  transition: all 1s ease;
+  //transition: all 1s ease;
   display: flex;
   flex-direction: column;
 }
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration-hover);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-light);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+      content: '';
+    }
+  }
+}
+
 main {
   flex-grow: 1;
 }
@@ -56,38 +92,4 @@ h2, .h2 {
   @include fluid-text(58, 28);
 }
 
-a,
-button,
-label,
-input,
-textarea,
-select,
-svg * {
-  transition-duration: var(--transition-duration-hover);
-}
 
-a {
-  color: inherit;
-
-  &[class] {
-    text-decoration: none;
-  }
-}
-
-:focus-visible {
-  outline: rem(2) dashed var(--color-light);
-  outline-offset: rem(4);
-  transition-duration: 0s !important;
-}
-a,
-button {
-  &[aria-label] {
-    position: relative;
-
-    &::before {
-      @include abs-center;
-      @include square(rem(44));
-      content: '';
-    }
-  }
-}
