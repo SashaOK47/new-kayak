@@ -19,16 +19,13 @@ export const sendMessage = async (form) => {
 
     try {
         await sendMessageTelegramApi(messageText);
-        form.name.style.border = "none";
-        form.phone.style.border = "none";
-        form.message.style.border = "none";
+        // Показать пользователю сообщение об успешной доставке
         successMessage();
         form.reset();
-        // Показать пользователю сообщение об успешной доставке
     } catch (error) {
         console.error(error.message);
-        errorMessage();
         // Показать пользователю ошибку
+        errorMessage();
     }
 
 }

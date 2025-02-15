@@ -1,11 +1,16 @@
 export const errors = document.querySelectorAll(".form__error");
 
+let idInterval;
+
 export const validateForm = (form) => {
-    clearErrors(form);
+    clearInterval(idInterval);
+    clearErrors();
 
     const name = form.name;
     const phone = form.phone;
     const message = form.message;
+
+
 
     let isValid = true;
 
@@ -13,11 +18,11 @@ export const validateForm = (form) => {
     if(name.value.trim() === '') {
         showError(name, 'Поле "Имя" обязательно для заполнения.');
         isValid = false;
+        clearErrorAndBorderTime(name);
     }else if (!/^[A-Za-zА-Яа-я\s]+$/.test(name.value)) {
         showError(name, "Имя должно содержать только буквы.");
         isValid = false;
-    } else {
-        name.style.border = "1px solid green";
+        clearErrorAndBorderTime(name);
     }
 
 
@@ -25,19 +30,18 @@ export const validateForm = (form) => {
     if (phone.value.trim() === "") {
         showError(phone,'Поле "Телефон" обязательно для заполнения.');
         isValid = false;
+        clearErrorAndBorderTime(phone);
     } else if (phone.value.trim().length < 19) {
         showError(phone,"Введите корректный номер телефона");
         isValid = false;
-    }else {
-        phone.style.border = "1px solid green";
+        clearErrorAndBorderTime(phone);
     }
 
     // Валидация сообщения
     if (message.value.trim() === "") {
         showError(message,'Поле "Сообщение" обязательно для заполнения.');
         isValid = false;
-    }else {
-        message.style.border = "1px solid green";
+        clearErrorAndBorderTime(message);
     }
 
     return isValid;
@@ -46,11 +50,16 @@ export const validateForm = (form) => {
 function showError(element, message) {
     const spanError = element.nextElementSibling;
     spanError.textContent = message;
-    element.style.border = "1px solid red";
 }
 
-function clearErrors(form) {
+function clearErrors() {
     errors.forEach((error) => {
         error.textContent = "";
     });
+}
+
+function clearErrorAndBorderTime (element) {
+    idInterval = setTimeout(() => {
+        element.nextElementSibling.textContent = "";
+    }, 5000)
 }
