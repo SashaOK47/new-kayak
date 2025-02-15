@@ -4,9 +4,11 @@ const modalFeedback = () => {
     const modalFeedbackPopup = document.querySelector('.modal-feedback');
     const modalCloseButtonFeedback = document.querySelector('.js-feedback-close');
     const errorMessages = document.querySelectorAll('.form__message');
+    const modalRulesPopup = document.querySelector('.modal-rules');
 
     feedbackButtons.forEach((feedbackButton) => {
         feedbackButton.addEventListener('click', () => {
+            modalRulesPopup.style.display = 'none';
             modalFeedbackPopup.style.display = 'block';
             document.documentElement.classList.add('no-scroll');
         })

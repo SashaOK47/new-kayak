@@ -19,8 +19,15 @@
                 <button class="button js-feedback">записаться на сплав</button>
             </div>
             <picture>
-                <source srcset="img/modal-rules.webp" type="image/webp">
-                <img class="modal-rules__image" loading="lazy" src="img/modal-rules.png" width="817" height="612" alt="">
+                <source data-srcset="img/modal-rules.webp" type="image/webp">
+                <img
+                        class="modal-rules__image lazyload"
+                        loading="lazy"
+                        data-src="img/modal-rules.png"
+                        width="820"
+                        height="620"
+                        alt=""
+                >
             </picture>
             <button
                     class="modal-rules__close js-modal-close"
