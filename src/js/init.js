@@ -1,6 +1,4 @@
 import 'lazysizes';
-// import a plugin
-// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import { switchTheme } from "./components/switch-theme.js";
 import { burgerMenu } from "./components/burger-menu.js";
