@@ -15,9 +15,9 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  //transition: all 1s ease;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 a,
 button,
