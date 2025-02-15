@@ -1,3 +1,5 @@
+import 'lazysizes';
+
 import { switchTheme } from "./components/switch-theme.js";
 import { burgerMenu } from "./components/burger-menu.js";
 import { faq } from "./components/faq.js";
