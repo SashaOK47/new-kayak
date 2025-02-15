@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "imask": "^7.6.1",
+    "lazysizes": "^5.3.2",
     "sweetalert2": "^11.16.1"
   }
 }
