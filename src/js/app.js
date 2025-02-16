@@ -5,6 +5,7 @@ import modalRules from "./components/modal-rules.js";
 import modalPrivacy from "./components/modal-privacy.js";
 import modalFeedback from "./components/modal-feedback.js";
 import { initForms } from "./components/inits/init-forms.js";
+import { yaMap } from "./api/yaMap.js";
 
 initForms();
 switchTheme();
@@ -13,3 +14,4 @@ faq();
 modalRules();
 modalPrivacy();
 modalFeedback();
+yaMap();
