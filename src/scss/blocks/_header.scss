@@ -41,7 +41,11 @@
       row-gap: 3rem;
       padding: 1rem;
       transition-duration: var(--transition-duration-hover);
-      background-image: url("../img/menu.png");
+      //background-image: url("../img/menu.png");
+      background-image: image-set(
+                      "../img/menu.webp"type("image/webp"),
+                      "../img/menu.png" type("image/png")
+      );
       background-position: bottom right;
       background-repeat: no-repeat;
       background-size: 70%;

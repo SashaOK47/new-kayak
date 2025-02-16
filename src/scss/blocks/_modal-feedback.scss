@@ -18,7 +18,11 @@
     padding-bottom: rem(20);
     padding-inline: rem(45);
     background-color: var(--color-bg-modal);
-    background-image: url('../img/modal-feedback.png');
+    //background-image: url('../img/modal-feedback.png');
+    background-image: image-set(
+                    "../img/modal-feedback.webp"type("image/webp"),
+                    "../img/modal-feedback.png" type("image/png")
+    );
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 40%;

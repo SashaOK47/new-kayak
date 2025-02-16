@@ -30,7 +30,11 @@
         display: inline-flex;
         align-items: center;
         column-gap: 1rem;
-        background-image: url("../img/hero-subtitle-2.png");
+        //background-image: url("../img/hero-subtitle-2.png");
+        background-image: image-set(
+                        "../img/hero-subtitle-2.webp"type("image/webp"),
+                        "../img/hero-subtitle-2.png" type("image/png")
+        );
         background-repeat: no-repeat;
         background-position: 89%;
         background-size: 25%;
@@ -38,7 +42,11 @@
           content: "";
           width: rem(200);
           height: rem(180);
-          background-image: url("../img/hero-subtitle-3.png");
+          //background-image: url("../img/hero-subtitle-3.png");
+          background-image: image-set(
+                          "../img/hero-subtitle-3.webp"type("image/webp"),
+                          "../img/hero-subtitle-3.png" type("image/png")
+          );
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;

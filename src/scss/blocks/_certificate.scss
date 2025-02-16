@@ -23,7 +23,11 @@
     }
   }
   &__info {
-    background-image: url('../img/certificate-bg.png');
+    //background-image: url('../img/certificate-bg.png');
+    background-image: image-set(
+                    "../img/certificate-bg.webp"type("image/webp"),
+                    "../img/certificate-bg.png" type("image/png")
+    );
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: contain;
