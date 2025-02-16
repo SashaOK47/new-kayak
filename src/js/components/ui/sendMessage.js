@@ -12,7 +12,7 @@ export const sendMessage = async (form) => {
 
     if(!isValid) return;
 
-    let messageText = `Сообщение с сайта:   <strong>https://sashaok47.github.io/new-kayak/</strong>\n`;
+    let messageText = `Сообщение с сайта:   <strong>https://brest-kayak.by/</strong>\n`;
     messageText += `Отправитель:   <strong>${name}</strong>\n`;
     messageText += `Телефон:   <strong>${phone}</strong>\n`;
     messageText += `Сообщение:   <strong>${message}</strong>\n`;
