@@ -7,19 +7,19 @@ const modalPrivacy = () => {
         modalPrivacyLinkButton.addEventListener('click', (e) => {
             e.preventDefault();
             modalPrivacyPopup.style.display = 'block';
-            document.documentElement.classList.add('no-scroll');
+            document.body.classList.add('no-scroll');
         })
     })
 
     modalPrivacyPopup.addEventListener('click', (e) => {
         if(e.target && e.target === modalPrivacyPopup) {
             modalPrivacyPopup.style.display = 'none';
-            document.documentElement.classList.remove('no-scroll');
+            document.body.classList.remove('no-scroll');
         }
     })
     modalCloseButtonPrivacy.addEventListener('click', () => {
         modalPrivacyPopup.style.display = 'none';
-        document.documentElement.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
     })
 }
 

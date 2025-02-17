@@ -10,14 +10,14 @@ const modalFeedback = () => {
         feedbackButton.addEventListener('click', () => {
             modalRulesPopup.style.display = 'none';
             modalFeedbackPopup.style.display = 'block';
-            document.documentElement.classList.add('no-scroll');
+            document.body.classList.add('no-scroll');
         })
     })
 
     modalFeedbackPopup.addEventListener('click', (e) => {
         if(e.target && e.target === modalFeedbackPopup) {
             modalFeedbackPopup.style.display = 'none';
-            document.documentElement.classList.remove('no-scroll');
+            document.body.classList.remove('no-scroll');
             forms.forEach((form) => {
                 form.reset();
                 form.querySelector('button').setAttribute('disabled', 'disabled');
@@ -31,7 +31,7 @@ const modalFeedback = () => {
     })
     modalCloseButtonFeedback.addEventListener('click', () => {
         modalFeedbackPopup.style.display = 'none';
-        document.documentElement.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
         forms.forEach((form) => {
             form.reset();
             form.querySelector('button').setAttribute('disabled', 'disabled');

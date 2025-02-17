@@ -6,6 +6,8 @@ import modalPrivacy from "./components/modal-privacy.js";
 import modalFeedback from "./components/modal-feedback.js";
 import { initForms } from "./components/inits/init-forms.js";
 import { yaMap } from "./api/yaMap.js";
+import { gallery } from "./components/gallery.js";
+import {galleryLoadMore} from "./components/galleryLoadMore.js";
 
 initForms();
 switchTheme();
@@ -15,3 +17,5 @@ modalRules();
 modalPrivacy();
 modalFeedback();
 yaMap();
+gallery()
+galleryLoadMore();

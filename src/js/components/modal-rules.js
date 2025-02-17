@@ -5,17 +5,17 @@ const modalRules = () => {
 
     modalRulesButton.addEventListener('click', () => {
         modalRulesPopup.style.display = 'block';
-        document.documentElement.classList.add('no-scroll');
+        document.body.classList.add('no-scroll');
     })
     modalRulesPopup.addEventListener('click', (e) => {
         if(e.target && e.target === modalRulesPopup) {
             modalRulesPopup.style.display = 'none';
-            document.documentElement.classList.remove('no-scroll');
+            document.body.classList.remove('no-scroll');
         }
     })
     modalCloseButton.addEventListener('click', () => {
         modalRulesPopup.style.display = 'none';
-        document.documentElement.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
     })
 }
 
