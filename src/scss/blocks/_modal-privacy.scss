@@ -7,6 +7,7 @@
   z-index: 11;
   display: none;
   &__inner {
+    @include abs-center;
     position: relative;
     padding-top: rem(20);
     padding-bottom: rem(20);
@@ -14,11 +15,11 @@
     max-height: rem(800);
     overflow-y: auto;
     color: var(--text);
+    width: 80%;
     @media(max-width: rem(1200)) {
       overflow-y: auto;
     }
-    @include abs-center;
-    width: 80%;
+
     @media(max-width: rem(480)) {
       padding-top: rem(40);
     }

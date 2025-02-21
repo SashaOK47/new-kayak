@@ -2,7 +2,7 @@
 
 .burger-menu {
   display: none;
-  @media (max-width: 980px) {
+  @include mobile {
     @include square(rem(34));
     position: relative;
     z-index: 12;

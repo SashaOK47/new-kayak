@@ -12,96 +12,27 @@
     color: var(--text);
   }
   &__content {
+    @include fluid-text(16, 14);
     display: grid;
-    grid-template-columns: 60% 1fr;
-    column-gap: rem(200);
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(24);
     color: var(--text);
-    @media (max-width: rem(980)) {
+    @media (max-width: rem(667)) {
       grid-template-columns: 1fr;
     }
-    @media (max-width: rem(480)) {
-      column-gap: 0;
-      row-gap: rem(40);
-    }
+  }
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    @media (max-width: rem(980)) {
-      order: 1;
-    }
-  }
-  &__list {
-    margin-bottom: rem(48);
-    max-width: rem(790);
-    display: flex;
-    flex-direction: column;
-    gap: rem(16);
-  }
-  &__item {
-    border-bottom: var(--border);
-    &.active {
-      .faq__button-line {
-        transform: rotate(45deg);
-        transition: var(--transition-duration);
-      }
-    }
-  }
-  &__question {
-    font-weight: 700;
-    text-transform: uppercase;
-    width: 100%;
-    position: relative;
-    cursor: pointer;
-    padding-bottom: rem(12);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: var(--transition);
-    @include fluid-text(16, 14);
-  }
-  &__button {
-    flex-shrink: 0;
-    margin-left: 1rem;
-    pointer-events: none;
-    width: 2.4rem;
-    height: 2.4rem;
-    border: none;
-    background-color: transparent;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &__button-line {
-    display: inline-block;
-    width: rem(20);
-    height: rem(1);
-    background-color: var(--text);
-    position: relative;
-    transition: var(--transition-duration);
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: rotate(90deg);
-      width: 100%;
-      height: 100%;
-      background-color: var(--text);
-    }
-  }
-  &__answer {
-    position: relative;
-    overflow: hidden;
-    max-height: 0;
-    transition: .5s;
-  }
-  &__answer-text {
-    padding-right: rem(20);
-    padding-bottom: rem(20);
-    font-weight: 300;
-    @include fluid-text(16, 14);
+    //@media (max-width: rem(667)) {
+    //  order: 1;
+    //}
   }
 }

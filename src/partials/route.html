@@ -1,37 +1,65 @@
 <section class="route" id="route">
-  <div class="route__inner container">
-    <h2 class="route__title">маршрут</h2>
-    <p class="route__subtitle">Сплавы проходят по реке Лесная</p>
+  <div class="route__inner section-inner container">
+    <h2 class="route__title section-title">Маршрут</h2>
+    <p class="route__subtitle section-subtitle">Сплавы проходят по реке Лесная</p>
     <div class="route__content">
-      <div class="route__info">
-        <table class="route__table">
-          <tbody>
-            <tr>
-              <td>Тип сплава</td>
-              <td>Дневной</td>
+      <div class="route__description">
+        <div class="route__info">
+          <p class="route__info-text">
+            <span class="text-accent">Река Лесная</span> — это идеальное место для сплавов, где вас ждут живописные пейзажи, уютные берега и удивительная
+            природа Брестского края.
+          </p>
+          <p class="route__info-text">
+            Идеальный маршрут как для новичков, так и для опытных туристов. Спокойное течение, красивые берега и
+            возможность насладиться природой без лишних сложностей.
+          </p>
+          <div class="route__info-description">
+            <p class="route__info-title text-accent">Что входит в каждый маршрут:</p>
+            <ul class="route__info-list">
+              <li class="route__info-item">- Аренда каяка или сапборда</li>
+              <li class="route__info-item">- Снаряжение (весло, спасательный жилет, гермомешок для вещей,
+                водонепроницаемый чехол для телефона)</li>
+              <li class="route__info-item">- Инструктаж</li>
+              <li class="route__info-item">- Трансфер до точки старта (по запросу)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="route__characteristics">
+          <div class="route__image">
+            <picture>
+              <source srcset="./img/route.webp" type="image/webp" />
+              <img src="img/route.png" width="208" height="347" alt=""/>
+            </picture>
+          </div>
+          <table class="route__table">
+            <tbody>
+            <tr class="route__table-tr">
+              <td class="route__table-td">Тип сплава</td>
+              <td class="route__table-td">Дневной</td>
             </tr>
-            <tr>
-              <td>Протяженность</td>
-              <td>~13км</td>
+            <tr class="route__table-tr">
+              <td class="route__table-td">Протяженность</td>
+              <td class="route__table-td">~13км</td>
             </tr>
-            <tr>
-              <td>Длитенность</td>
-              <td>2,5-3 часа</td>
+            <tr class="route__table-tr">
+              <td class="route__table-td">Длитенность</td>
+              <td class="route__table-td">2,5-3 часа</td>
             </tr>
-            <tr>
-              <td>Старт</td>
-              <td>д.Тюхиничи</td>
+            <tr class="route__table-tr">
+              <td class="route__table-td">Старт</td>
+              <td class="route__table-td">д.Тюхиничи</td>
             </tr>
-            <tr>
-              <td>Финиш</td>
-              <td>д.Пески</td>
+            <tr class="route__table-tr">
+              <td class="route__table-td">Финиш</td>
+              <td class="route__table-td">д.Пески</td>
             </tr>
-            <tr>
-              <td>Стоимость</td>
-              <td>50 бел.руб./чел.</td>
+            <tr class="route__table-tr">
+              <td class="route__table-td">Стоимость</td>
+              <td class="route__table-td">50 бел.руб./чел.</td>
             </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div class="route__map">
         <div id="mymap" class="route__map-frame"></div>
@@ -48,6 +76,6 @@
         </div>
       </div>
     </div>
-    <button class="button js-rules">правила поведения на сплаве</button>
+    <button class="button js-rules">Правила поведения на сплаве</button>
   </div>
 </section>

@@ -12,10 +12,10 @@ import {galleryLoadMore} from "./components/galleryLoadMore.js";
 initForms();
 switchTheme();
 burgerMenu();
-faq();
+// faq();
 modalRules();
-modalPrivacy();
+// modalPrivacy();
 modalFeedback();
+// gallery()
+// galleryLoadMore();
 yaMap();
-gallery()
-galleryLoadMore();

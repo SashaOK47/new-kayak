@@ -4,8 +4,59 @@
   position: fixed;
   inset: 0;
   background-color: var(--color-modal);
-  z-index: 12;
+  z-index: 3;
   display: none;
+  overflow: auto;
+  &.modal-show {
+    animation: fadeIn .3s ease-in-out forwards;
+
+    > .modal-feedback__inner {
+      animation: fadeInDown .3s ease-in-out forwards;
+    }
+  }
+  &.modal-hide {
+    animation: fadeOut .3s ease-in-out forwards;
+
+    > .modal-feedback__inner {
+      animation: fadeOutUp .3s ease-in-out forwards;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeOutUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-5rem);
+    }
+  }
   &__subtitle {
     @include fluid-text(20, 16);
 
@@ -14,24 +65,26 @@
       color: var(--text);
   }
   &__inner {
-    padding-top: rem(20);
-    padding-bottom: rem(20);
+    @include abs-center;
+
+    padding-block: rem(20);
     padding-inline: rem(45);
     background-color: var(--color-bg-modal);
-    //background-image: url('../img/modal-feedback.png');
-    background-image: image-set(
-                    "../img/modal-feedback.webp"type("image/webp"),
-                    "../img/modal-feedback.png" type("image/png")
-    );
+    background-image: url('../img/modal-feedback2.png');
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: 40%;
-    color: var(--text);
-    @include abs-center;
+    color: var(--color-text);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-small);
+    overflow: auto;
     @media (max-width: rem(980)) {
-      width: 80%;
+      width: 70%;
     }
-    @media (max-width: rem(767)) {
+    @include mobile {
+      width: 80%;
+      padding-inline: rem(12);
+    }
+    @include mobile-s {
       width: 90%;
       padding-inline: rem(12);
     }
@@ -44,7 +97,7 @@
     height: rem(32);
     border: none;
     background-color: transparent;
-    @media(max-width: rem(480)) {
+    @include mobile-s {
       top: rem(6);
       right: rem(6);
     }

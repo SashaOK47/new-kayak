@@ -8,13 +8,17 @@
   --color-darken: #4d4d4d;
   --color-bg: #a8d8ff;
   --color-gray: #98989a;
-  --color-accent: #fcce1d;
+  --color-accent: #FB6406;
+  --color-secondary: #fcce1d;
   --color-decor-blur: #e1eefe;
+  --gradient: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
 
-  --border: #{rem(1)} solid var(--color-gray);
-  --text-shadow: 4px 4px 4px var(--color-dark-rgba);
-  --box-shadow: 0 4px 4px 0 var(--color-dark-rgba);
-  --font-family-base: "PT Sans Narrow", sans-serif;
+
+  --border: #{rem(1)} solid var(--color-dark-rgba);
+  --border-radius-small: #{rem(10)};
+  --border-radius-large: #{rem(35)};
+  --box-shadow: 0 #{rem(8)} #{rem(16)} rgba(255, 255, 255, 0.3);
+  --font-family-base: "Oswald", sans-serif;
   --font-family-accent: "Buyan", sans-serif;
 
   --container-width: #{rem(1600)};
@@ -25,36 +29,44 @@
 
   --transparent: transparent;
 
+  --margin-bottom: #{rem(48)};
+
   // theme light
-  --background: var(--color-bg);
-  --text: var(--color-dark);
-  --header-bg: rgba(255, 255, 255, 0.3);
-  --decor-blur: var(--color-decor-blur);
+  --background-image: url("../img/bg.jpg");
+  --color-text: var(--color-darken);
+  --text-shadow: #{rem(4)} #{rem(4)} #{rem(4)} rgba(0, 0, 0, 0.25);
+  --color-border: rgba(0, 0, 0, 0.25);
+  //--box-shadow: 0 #{rem(4)} #{rem(20)} rgba(0, 0, 0, 0.4);
+
+
   --rotate-angle: 0deg;
   --indicate: #e6e6e6;
-  --bg-indicate: #64b5f6;
-  --left-position: 5px;
+  --bg-indicate: var(--color-darken);
+  --left-position: 4px;
   --color-svg: var(--color-light);
-  --color-burger: var(--color-dark);
   --color-burger-menu: var(--color-bg);
   --color-bg-modal: #a8d8ff;
+  --color-burger: var(--color-darken);
 
-  @include laptop {
-    --container-width: #{rem(1280)};
+  @include mobile-s {
+    --margin-bottom: #{rem(32)};
   }
 }
 
 // theme dark
 :root[data-theme="dark"] {
-  --background: url("../img/space.jpg");
-  --text: var(--color-light);
-  --header-bg: rgba(0, 0, 0, 0.9);
-  --decor-blur: var(--transparent);
+  --background-image: url("../img/night.png");
+  --color-text: var(--color-light);
+  --text-shadow: #{rem(4)} #{rem(4)} #{rem(4)} rgba(255, 255, 255, 0.25);
+  --color-border: rgba(255, 255, 255, 0.25);
+
+
+
   --rotate-angle: 360deg;
-  --bg-indicate: var(--color-accent);
-  --left-position: 35px;
+  --bg-indicate: var(--color-light);
+  --left-position: 32px;
   --color-svg: var(--color-dark);
-  --color-burger: var(--color-light);
   --color-burger-menu: var(--color-dark);
   --color-bg-modal: #2d2d2d;
+  --color-burger: var(--color-light);
 }

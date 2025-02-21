@@ -17,7 +17,5 @@
 }
 // Скрывать элемент на ширине 768px и более
 .visible-mobile {
-  @include mobile-above {
-    display: none !important;
-  }
+  display: none !important;
 }

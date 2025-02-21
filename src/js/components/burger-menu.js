@@ -14,7 +14,7 @@ export const burgerMenu = () => {
         link.addEventListener('click', () => {
             headerOverlay.classList.remove('is-active');
             burgerMenuButton.classList.remove('is-active');
-            document.body.classList.remove('no-scroll');
+            document.body.classList.toggle('no-scroll');
         })
     })
 }

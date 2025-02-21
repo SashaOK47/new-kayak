@@ -1,67 +1,123 @@
 @use "../helpers" as *;
 
 .route {
-  &__inner {
-    padding-top: rem(40);
-    padding-bottom: rem(40);
-  }
-  &__subtitle {
-    @include fluid-text(20, 16);
-
-    margin-bottom: rem(48);
-    color: var(--text);
-  }
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+    grid-template-columns: 55% 1fr;
+    column-gap: 1rem;
     color: var(--text);
-    @media (max-width: rem(767)) {
+    @include laptop {
       grid-template-columns: 1fr;
-      margin-bottom: rem(48);
+      row-gap: 2rem;
     }
+  }
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr 55%;
+    column-gap: 1rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
+  &__characteristics {
+    display: flex;
+    align-items: start;
   }
   &__info {
-    max-width: rem(400);
+    &-title {
+      font-weight: 500;
+      font-size: rem(18);
+    }
+    &-text {
+      color: var(--color-text);
+      span {
+        font-weight: 500;
+        font-size: rem(18);
+      }
+      &:first-child {
+        margin-bottom: rem(8);
+      }
+    }
+    &-description {
+      margin-top: rem(16);
+    }
+    &-title {
+      margin-bottom: rem(8);
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(8);
+    }
+    &-item {
+      color: var(--color-text);
+    }
+  }
+  &__image {
+    align-self: end;
+    img {
+      max-width: inherit;
+      @include mobile-s {
+        max-width: 100%;
+      }
+    }
   }
   &__table {
-    @include fluid-text(24, 16);
-    text-transform: uppercase;
+    max-width: rem(305);
     width: 100%;
-    tr {
-      margin-bottom: rem(12);
-      border-bottom: var(--border);
+    position: relative;
+    z-index: -1;
+    left: rem(-20);
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    &-tr {
+
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      &:not(:last-child) {
+        border-bottom: 1px solid #dddddd;
+      }
     }
-    td {
-      padding-top: rem(6);
-      padding-bottom: rem(6);
+    &-td {
+      max-width: rem(135);
+      width: 100%;
+      padding: rem(8);
+      &:first-child {
+        background-color: var(--color-accent);
+      }
       &:last-child {
-        font-weight: 700;
+        text-align: right;
       }
     }
   }
   &__map {
     &-frame {
-      margin-bottom: rem(10);
+      margin-bottom: rem(8);
+      iframe {
+        border: none;
+      }
     }
     &-info {
       p {
+        color: var(--color-text);
         margin: 0;
         &:first-child {
-          margin-bottom: rem(10);
+          margin-bottom: rem(4);
         }
         span {
-          background-color: var(--color-accent);
-          color: var(--color-darken);
+          color: var(--color-accent);
+          font-weight: 500;
         }
       }
     }
-  }
-  &__map-frame {
-    iframe {
-      border: none;
+
+    @include laptop {
+      margin-bottom: var(--margin-bottom);
     }
   }
+
 }

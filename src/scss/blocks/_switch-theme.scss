@@ -9,11 +9,11 @@
 
   &__label {
     position: relative;
-    width: 64px;
-    height: 32px;
+    width: 60px;
+    height: 30px;
     border: 2px solid var(--bg-indicate);
     //border: 2px solid var(--color-accent);
-    border-radius: 20px;
+    border-radius: 35px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -34,7 +34,6 @@
     height: 20px;
     border-radius: 100%;
     transition: background-color 1s ease;
-    color: var(--indicate);
     background-color: var(--bg-indicate);
     cursor: pointer;
 

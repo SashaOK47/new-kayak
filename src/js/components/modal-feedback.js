@@ -8,20 +8,27 @@ const modalFeedback = () => {
 
     feedbackButtons.forEach((feedbackButton) => {
         feedbackButton.addEventListener('click', () => {
-            modalRulesPopup.style.display = 'none';
+            // modalRulesPopup.style.display = 'none';
             modalFeedbackPopup.style.display = 'block';
+            modalFeedbackPopup.classList.add('modal-show');
             document.body.classList.add('no-scroll');
         })
     })
 
     modalFeedbackPopup.addEventListener('click', (e) => {
         if(e.target && e.target === modalFeedbackPopup) {
-            modalFeedbackPopup.style.display = 'none';
-            document.body.classList.remove('no-scroll');
-            forms.forEach((form) => {
-                form.reset();
-                form.querySelector('button').setAttribute('disabled', 'disabled');
-            })
+            modalFeedbackPopup.classList.add('modal-hide');
+
+            setTimeout(() => {
+                modalFeedbackPopup.style.display = 'none';
+                modalFeedbackPopup.classList.remove('modal-show', 'modal-hide');
+                document.body.classList.remove('no-scroll');
+                forms.forEach((form) => {
+                    form.reset();
+                    form.querySelector('button').setAttribute('disabled', 'disabled');
+                })
+            }, 200);
+
         }
 
         errorMessages.forEach((errorMessage) => {
@@ -30,12 +37,18 @@ const modalFeedback = () => {
 
     })
     modalCloseButtonFeedback.addEventListener('click', () => {
-        modalFeedbackPopup.style.display = 'none';
-        document.body.classList.remove('no-scroll');
-        forms.forEach((form) => {
-            form.reset();
-            form.querySelector('button').setAttribute('disabled', 'disabled');
-        })
+        modalFeedbackPopup.classList.add('modal-hide');
+        setTimeout(() => {
+            modalFeedbackPopup.style.display = 'none';
+            modalFeedbackPopup.classList.remove('modal-show', 'modal-hide');
+            document.body.classList.remove('no-scroll');
+            forms.forEach((form) => {
+                form.reset();
+                form.querySelector('button').setAttribute('disabled', 'disabled');
+            })
+        }, 200);
+
+
         errorMessages.forEach((errorMessage) => {
             errorMessage.innerHTML = '';
         })

@@ -1,17 +1,16 @@
 export const faq = () => {
+    const accordionControls = document.querySelectorAll(
+        ".accordion__control"
+    );
 
-    const faqItem = document.querySelectorAll(".faq__item");
-
-    faqItem.forEach((el) => {
-        el.addEventListener("click", (e) => {
-            e.preventDefault();
-            const currentItem = e.target.closest(".faq__item");
-            const content = e.target.nextElementSibling;
-            currentItem.classList.toggle("active");
-            if (currentItem.classList.contains("active")) {
-                content.style.maxHeight = content.scrollHeight + "px";
+    accordionControls.forEach((accordionControl) => {
+        accordionControl.addEventListener("click", (event) => {
+            accordionControl.classList.toggle("active");
+            const accordionBody = accordionControl.nextElementSibling;
+            if (accordionControl.classList.contains("active")) {
+                accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
             } else {
-                content.style.maxHeight = null;
+                accordionBody.style.maxHeight = 0;
             }
         });
     });
