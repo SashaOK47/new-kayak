@@ -7,6 +7,11 @@ export function switchTheme() {
 
 
     function toggleTheme() {
+        document.body.style.transition = '0.5s';
+
+        setTimeout(() => {
+            document.body.style.transition = 'none';
+        }, 200);
         const currentTheme = document.documentElement.getAttribute('data-theme');
 
         let newTheme;

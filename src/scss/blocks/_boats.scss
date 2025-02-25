@@ -1,42 +1,57 @@
 @use "helpers" as *;
 
 .boats {
-  &__inner {
-    padding-top: rem(40);
-    padding-bottom: rem(40);
-  }
-  &__subtitle {
-
-  }
   &__content {
-    margin-bottom: rem(40);
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 1fr;
     align-items: center;
-    column-gap: rem(40);
-    justify-content: space-between;
-    @media (max-width: rem(767)) {
-      flex-direction: column;
-      column-gap: 0;
-      row-gap: rem(40);
+    column-gap: 2rem;
+    margin-bottom: var(--margin-bottom);
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__description {
+    @include tablet {
+      margin-bottom: rem(32);
+    }
+  }
+  &__image {
+    margin-bottom: rem(48);
+  }
+  &__info {
+    &-text {
+      &:first-of-type {
+        margin-bottom: rem(8);
+        color: var(--color-primary);
+        transition: var(--transition-duration);
+      }
+      &:last-of-type {
+        margin-bottom: rem(24);
+        color: var(--color-primary);
+        transition: var(--transition-duration);
+      }
+    }
+    &-title {
+      margin-bottom: rem(8);
+      font-weight: 500;
+      font-size: rem(20);
     }
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 3rem;
-    row-gap: 10rem;
-    @media (max-width: rem(767)) {
-      row-gap: 5rem;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+    gap: rem(20);
+    @include tablet {
+      margin-bottom: var(--margin-bottom);
     }
-    @media (max-width: rem(480)) {
-      grid-template-columns: 1fr;
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(10);
     }
-  }
-  &__item {
-    text-align: center;
-    &-title {
-      margin-bottom: rem(24);
-      color: var(--text);
+    @include mobile-s {
+      grid-template-columns: 80%;
     }
   }
 }

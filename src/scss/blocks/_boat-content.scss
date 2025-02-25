@@ -1,0 +1,33 @@
+@use "helpers" as *;
+
+.boat-content {
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: rem(32);
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    &-title {
+      @include fluid-text(24, 20);
+      color: var(--color-primary);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: rem(16);
+    }
+  }
+  .table__td {
+    max-width: none;
+    &:last-child {
+      max-width: rem(250);
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    color: var(--color-primary);
+    margin-bottom: var(--margin-bottom);
+  }
+}

@@ -1,0 +1,42 @@
+@use "helpers" as *;
+
+.rules-content {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    margin: 1rem;
+    float: right;
+    @include mobile {
+      float: none;
+      margin: 0;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: rem(18);
+    color: var(--color-primary);
+    margin-bottom: rem(12);
+  }
+  &__list {
+    margin-bottom: rem(24);
+  }
+  &__subtitle {
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: rem(8);
+    &:not(:first-child) {
+      margin-top: rem(16);
+    }
+  }
+  &__text {
+    color: var(--color-primary);
+    margin-bottom: rem(8);
+    font-weight: 300;
+  }
+  &__warning {
+    margin-bottom: rem(48);
+    font-size: rem(18);
+  }
+}

@@ -5,7 +5,8 @@ export const successMessage = () => {
         title: "Ваше сообщение отправлено!",
         text: "Наш менеджер свяжется с вами в ближайшее время",
         icon: "success",
-        timer: 5000
+        confirmButtonColor: "#FB6406",
+        timer: 4000
     });
 
     // Swal.fire({
@@ -22,6 +23,6 @@ export const errorMessage = () => {
         title: "Ошибка отправки данных!",
         text: "Сообщение не отправлено. Попробуйте ещё раз!",
         icon: "error",
-        timer: 5000
+        timer: 4000
     });
 }

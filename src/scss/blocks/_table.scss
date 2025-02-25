@@ -1,0 +1,31 @@
+@use "helpers" as *;
+
+.table {
+  width: 100%;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-light);
+  overflow: hidden;
+  &__tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &:not(:last-child) {
+      border-bottom: var(--border);
+    }
+  }
+  &__td {
+    max-width: rem(135);
+    width: 100%;
+    padding: rem(8);
+    &:first-child {
+      background-color: var(--color-accent);
+    }
+    &:last-child {
+      text-align: right;
+      color: #4d4d4d;
+      @include mobile-s {
+        padding: rem(4);
+      }
+    }
+  }
+}

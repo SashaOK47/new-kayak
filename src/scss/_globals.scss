@@ -1,18 +1,17 @@
-@use 'helpers' as *;
+@use "helpers" as *;
+
 body {
   @include fluid-text(16, 14);
-
   font-family: var(--font-family-base);
-  color: var(--color-dark);
+  color: var(--color-primary);
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  //background: linear-gradient(135deg, #a8d8ff, #c2e4ff);
   display: flex;
   flex-direction: column;
+  //transition: var(--transition-duration);
   overflow-x: hidden;
-  transition: var(--transition-duration);
 
   &.no-scroll {
     overflow: hidden;
@@ -60,30 +59,40 @@ main {
 
 section {
   margin-bottom: rem(120);
-  @media (max-width: rem(480)) {
-    margin-bottom: rem(80);
+  @include mobile-s {
+    margin-bottom: rem(60);
   }
 }
 .section-inner {
   padding-block: rem(40);
 }
 .section-title {
-  @include fluid-text(48, 24);
+  @include fluid-text(48, 32);
 
   font-family: var(--font-family-accent);
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-primary);
   line-height: 1;
   margin-bottom: rem(4);
+  transition: var(--transition-duration);
 }
 .section-subtitle {
-  @include fluid-text(20, 18);
+  @include fluid-text(20, 16);
 
-  color: var(--color-text);
+  max-width: rem(520);
+  color: var(--color-primary);
   margin-bottom: var(--margin-bottom);
+  transition: var(--transition-duration);
 }
 .text-accent {
   color: var(--color-accent);
 }
+
+p {
+  color: var(--color-primary);
+  transition: var(--transition-duration);
+}
+
+
 
 

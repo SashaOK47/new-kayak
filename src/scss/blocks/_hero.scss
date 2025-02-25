@@ -19,7 +19,7 @@
     @include fluid-text(96, 48);
     font-family: var(--font-family-accent);
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--color-primary);
     line-height: 1.05;
     margin-bottom: rem(12);
     transition: var(--transition-duration);
@@ -30,7 +30,7 @@
   &__text {
     @include fluid-text(24, 18);
     max-width: rem(596);
-    color: var(--color-text);
+    color: var(--color-primary);
     margin-bottom: var(--margin-bottom);
     transition: var(--transition-duration);
   }

@@ -17,4 +17,15 @@ export const burgerMenu = () => {
             document.body.classList.toggle('no-scroll');
         })
     })
+
+    // Закрытие меню при клике вне его области
+    // document.addEventListener('click', (event) => {
+    //
+    //     // Проверяем, был ли клик вне меню и кнопки
+    //     if (!headerOverlay.contains(event.target) && !burgerMenuButton.contains(event.target)) {
+    //         headerOverlay.classList.remove('is-active');
+    //         burgerMenuButton.classList.remove('is-active');
+    //         document.body.classList.toggle('no-scroll');
+    //     }
+    // });
 }

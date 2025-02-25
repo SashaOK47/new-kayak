@@ -1,86 +1,173 @@
 <section class="boats" id="boats">
-  <div class="boats__inner container">
-    <h2 class="boats__title">лодки</h2>
-    <p class="boats__subtitle">Аренда современного спортивного инвентаря</p>
+  <div class="boats__inner section-inner container">
+    <h2 class="boats__title section-title">лодки</h2>
+    <p class="boats__subtitle section-subtitle">Аренда современного спортивного инвентаря</p>
     <div class="boats__content">
-      <picture>
-        <source srcset="img/boats-img.webp" type="image/webp">
-        <img
-          class="boats__image"
-          loading="lazy"
-          src="img/boats-img.png"
-          width="400"
-          height="511"
-          alt=""
-        >
-      </picture>
+      <div class="boats__description">
+        <picture>
+          <source srcset="img/boats.webp" type="image/webp">
+          <img
+                  class="boats__image"
+                  loading="lazy"
+                  src="img/boats.png"
+                  width="651"
+                  height="473"
+                  alt=""
+          >
+        </picture>
+        <div class="boats__info">
+          <p class="boats__info-text">
+            Мы предлагаем аренду каяков и сапбордов для всех, кто хочет насладиться водными приключениями. Независимо
+            от того, новичок вы или опытный спортсмен, у нас есть оборудование, подходящее именно вам.
+          </p>
+          <p class="boats__info-text">
+            Наши каяки и сапборды — это современные, безопасные и удобные модели, которые подходят для прогулок по
+            спокойным водоемам или активных заплывов. Все оборудование проходит регулярное техническое обслуживание, чтобы обеспечить вашу безопасность.
+          </p>
+          <div class="boats__info-description">
+            <p class="boats__info-title text-accent">Готовы к приключениям?</p>
+            <p>
+              Не откладывайте свои планы! Забронируйте каяк или сапборд прямо сейчас и наслаждайтесь водными прогулками
+              в любое удобное время. Мы ждём вас!
+            </p>
+          </div>
+        </div>
+      </div>
       <ul class="boats__list">
         <li class="boats__item">
-          <h3 class="boats__item-title">
-            Надувной туристический каяк для 2 человек
-          </h3>
-          <picture>
-            <source srcset="img/kayak-1.webp" type="image/webp">
-            <img
-              class="boats__item-img"
-              loading="lazy"
-              data-src="./img/kayak-1.png"
-              width="500"
-              height="117"
-              alt="Туристический каяк"
-            >
-          </picture>
+          <article class="boat-card">
+            <div class="boat-card__header">
+              <h3 class="boat-card__title text-accent">
+                Надувной каяк Itiwit X100+
+              </h3>
+              <p class="boat-card__price">50 бел.руб/чел</p>
+              <p class="boat-card__price-hour">25 бел.руб/час</p>
+            </div>
+            <div class="boat-card__body">
+              <picture>
+                <source srcset="img/boat-1.webp" type="image/webp">
+                <img
+                  class="boat-card__image"
+                  loading="lazy"
+                  data-src="./img/boat-1.png"
+                  width="320"
+                  height="78"
+                  alt="Надувной каяк Itiwit X100+"
+                >
+              </picture>
+              <ul class="boat-card__list">
+                <li class="boat-card__item">Весла</li>
+                <li class="boat-card__item">Спасательный жилет</li>
+                <li class="boat-card__item">Гермомешок для личных вещей</li>
+                <li class="boat-card__item">Водонепроницаемый чехол для телефона</li>
+              </ul>
+            </div>
+            <div class="boat-card__footer">
+              <button class="button button--accent button--big js-boat">Подробнее</button>
+            </div>
+          </article>
         </li>
         <li class="boats__item">
-          <h3 class="boats__item-title">
-            Надувной туристический каяк для 3 человек
-          </h3>
-          <picture>
-            <source srcset="img/kayak-2.webp" type="image/webp">
-            <img
-              class="boats__item-img"
-              loading="lazy"
-              src="./img/kayak-2.png"
-              width="500"
-              height="117"
-              alt="Туристический каяк"
-            >
-          </picture>
+          <article class="boat-card">
+            <div class="boat-card__header">
+              <h3 class="boat-card__title text-accent">
+                Надувной каяк Itiwit X100+
+              </h3>
+              <p class="boat-card__price">50 бел.руб/чел</p>
+              <p class="boat-card__price-hour">25 бел.руб/час</p>
+            </div>
+            <div class="boat-card__body">
+              <picture>
+                <source srcset="img/boat-2.webp" type="image/webp">
+                <img
+                        class="boat-card__image"
+                        loading="lazy"
+                        data-src="./img/boat-2.png"
+                        width="320"
+                        height="78"
+                        alt="Надувной каяк Itiwit X100+"
+                >
+              </picture>
+              <ul class="boat-card__list">
+                <li class="boat-card__item">Весла</li>
+                <li class="boat-card__item">Спасательный жилет</li>
+                <li class="boat-card__item">Гермомешок для личных вещей</li>
+                <li class="boat-card__item">Водонепроницаемый чехол для телефона</li>
+              </ul>
+            </div>
+            <div class="boat-card__footer">
+              <button class="button button--accent button--big js-boat">Подробнее</button>
+            </div>
+          </article>
         </li>
         <li class="boats__item">
-          <h3 class="boats__item-title">
-            Надувная туристическая доска для серфинга
-          </h3>
-          <picture>
-            <source srcset="img/sup-1.webp" type="image/webp">
-            <img
-              class="boats__item-img"
-              loading="lazy"
-              src="./img/sup-1.png"
-              width="500"
-              height="117"
-              alt="Туристическая доска"
-            >
-          </picture>
+          <article class="boat-card">
+            <div class="boat-card__header">
+              <h3 class="boat-card__title text-accent">
+                Лучшая Сап доска Itiwit X100 10'
+              </h3>
+              <p class="boat-card__price">50 бел.руб/чел</p>
+              <p class="boat-card__price-hour">25 бел.руб/час</p>
+            </div>
+            <div class="boat-card__body">
+              <picture>
+                <source srcset="img/boat-3.webp" type="image/webp">
+                <img
+                        class="boat-card__image"
+                        loading="lazy"
+                        data-src="./img/boat-3.png"
+                        width="320"
+                        height="78"
+                        alt="Лучшая Сап доска Itiwit X100 10'"
+                >
+              </picture>
+              <ul class="boat-card__list">
+                <li class="boat-card__item">Весло</li>
+                <li class="boat-card__item">Спасательный жилет</li>
+                <li class="boat-card__item">Гермомешок для личных вещей</li>
+                <li class="boat-card__item">Водонепроницаемый чехол для телефона</li>
+              </ul>
+            </div>
+            <div class="boat-card__footer">
+              <button class="button button--accent button--big js-boat">Подробнее</button>
+            </div>
+          </article>
         </li>
         <li class="boats__item">
-          <h3 class="boats__item-title">
-            Надувная туристическая доска для серфинга
-          </h3>
-          <picture>
-            <source srcset="img/sup-2.webp" type="image/webp">
-            <img
-              class="boats__item-img"
-              loading="lazy"
-              src="./img/sup-2.png"
-              width="500"
-              height="117"
-              alt="Туристическая доска"
-            >
-          </picture>
+          <article class="boat-card">
+            <div class="boat-card__header">
+              <h3 class="boat-card__title text-accent">
+                Сапборд Itiwit X100 11' Синий
+              </h3>
+              <p class="boat-card__price">50 бел.руб/чел</p>
+              <p class="boat-card__price-hour">25 бел.руб/час</p>
+            </div>
+            <div class="boat-card__body">
+              <picture>
+                <source srcset="img/boat-4.webp" type="image/webp">
+                <img
+                        class="boat-card__image"
+                        loading="lazy"
+                        data-src="./img/boat-4.png"
+                        width="320"
+                        height="78"
+                        alt="Сапборд Itiwit X100 11' Синий"
+                >
+              </picture>
+              <ul class="boat-card__list">
+                <li class="boat-card__item">Весло</li>
+                <li class="boat-card__item">Спасательный жилет</li>
+                <li class="boat-card__item">Гермомешок для личных вещей</li>
+                <li class="boat-card__item">Водонепроницаемый чехол для телефона</li>
+              </ul>
+            </div>
+            <div class="boat-card__footer">
+              <button class="button button--accent button--big js-boat">Подробнее</button>
+            </div>
+          </article>
         </li>
       </ul>
     </div>
-    <button class="button js-feedback">Забронировать</button>
+    <button class="button button--accent js-feedback">Забронировать</button>
   </div>
 </section>

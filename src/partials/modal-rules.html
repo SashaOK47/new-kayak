@@ -1,43 +1,49 @@
-<div class="modal-rules">
-    <div class="modal-rules__inner container">
-        <h2 class="modal-rules__title">правила поведения на сплаве</h2>
-        <div class="modal-rules__content">
-            <div class="modal-rules__info">
-                <p class="modal-rules__info-title">Во время сплава соблюдение определенных правил поведения обеспечивает безопасность и вежливость на воде. Вот несколько важных рекомендаций:</p>
-                <ul class="modal-rules__info-list">
-                    <li class="modal-rules__info-item">Не вставайте в каяке</li>
-                    <li class="modal-rules__info-item">Прежде чем отправиться в путь, проверьте прогноз погоды и будьте в курсе любых потенциальных изменений погодных условий.</li>
-                    <li class="modal-rules__info-item">Избегайте катания на каяках во время шторма или сильного ветра.</li>
-                    <li class="modal-rules__info-item">Сохраняйте безопасную дистанцию. Держитесь на безопасном расстоянии от других плавсредств, пловцов, чтобы предотвратить столкновения и помехи.</li>
-                    <li class="modal-rules__info-item">Оставайтесь трезвыми: избегайте алкоголя и наркотиков во время катания на каяках, поскольку они ухудшают суждение, координацию и время реакции.</li>
-                    <li class="modal-rules__info-item">Уважайте дикую природу: наблюдайте за дикой природой на расстоянии и не нарушайте ее естественную среду обитания. Сведите уровень шума к минимуму.</li>
-                    <li class="modal-rules__info-item">Практика «Не оставлять следов»: уберите весь мусор и оставьте окружающую среду такой, какой вы ее нашли.</li>
-                    <li class="modal-rules__info-item">Минимизируйте свое воздействие на окружение.</li>
-                    <li class="modal-rules__info-item">Минимизируйте свое воздействие на окружение.</li>
-                </ul>
-                <p class="modal-rules__text">Соблюдая эти правила поведения, вы сможете наслаждаться безопасным и приятным каякингом, сохраняя при этом уважение к окружающей среде и другим водопользователям.</p>
-                <button class="button js-feedback">записаться на сплав</button>
-            </div>
+<div class="modal modal--rules">
+    <div class="modal__inner">
+        <button class="modal__close" type="button" aria-label="Закрыть модальное окно" title="Закрыть модальное окно">
+            <span class="modal__close-line"></span>
+            <span class="modal__close-line"></span>
+        </button>
+        <h2 class="modal__title section-title">Правила поведения на сплаве</h2>
+        <p class="modal__subtitle section-subtitle">Правила поведения на сплаве важны для обеспечения безопасности всех участников и сохранения окружающей среды.</p>
+        <div class="modal__content rules-content">
             <picture>
-                <source srcset="img/modal-rules.webp" type="image/webp">
-                <img
-                        class="modal-rules__image"
-                        loading="lazy"
-                        src="img/modal-rules.png"
-                        width="820"
-                        height="620"
-                        alt=""
-                >
+                <source srcset="./img/modal-rules.webp" type="image/webp" />
+                <img class="rules-content__image" src="img/modal-rules.png" width="327" height="496" alt=""/>
             </picture>
-            <button
-                    class="modal-rules__close js-modal-close"
-                    type="button"
-                    aria-label="Закрыть модальное окно"
-                    title="Закрыть модальное окно"
-            >
-                <span class="modal-rules__close-line"></span>
-                <span class="modal-rules__close-line"></span>
-            </button>
+            <div class="rules-content__description">
+                <p class="rules-content__title">Вот основные рекомендации:</p>
+                <dl class="rules-content__list">
+                    <dt class="rules-content__subtitle">1. Подготовка к сплаву</dt>
+                    <dd class="rules-content__text">- Пройдите обязательный инструктаж по технике безопасности. Узнайте о маршруте, возможных опасностях и правилах поведения на воде.</dd>
+                    <dd class="rules-content__text">- Проверьте, что у вас есть спасательные жилеты, шлемы (если требуется) и гермомешки для вещей.</dd>
+                    <dd class="rules-content__text">- Наденьте удобную одежду и обувь, которая не скользит и не сковывает движения.</dd>
+                    <dd class="rules-content__text">- Узнайте прогноз погоды. Не выходите на воду в случае штормового предупреждения или других неблагоприятных условий.</dd>
+
+                    <dt class="rules-content__subtitle">2. На воде</dt>
+                    <dd class="rules-content__text">- Не вставайте в каяке.</dd>
+                    <dd class="rules-content__text">- Всегда носите спасательный жилет, даже если вы уверены в своих плавательных навыках.</dd>
+                    <dd class="rules-content__text">- Соблюдайте безопасную дистанцию между плавсредствами, чтобы избежать столкновений.</dd>
+                    <dd class="rules-content__text">- Запрещено употреблять алкоголь или наркотические вещества во время сплава.</dd>
+
+                    <dt class="rules-content__subtitle">3. В экстренных ситуациях</dt>
+                    <dd class="rules-content__text">- Если вы упали в воду, не паникуйте. Держитесь за плавсредство или плывите к берегу, если это безопасно.</dd>
+                    <dd class="rules-content__text">- Если кто-то из участников оказался в воде, окажите помощь, но не подвергайте себя опасности.</dd>
+
+                    <dt class="rules-content__subtitle">4. На стоянках</dt>
+                    <dd class="rules-content__text">- Не оставляйте мусор, не рубите деревья и не нарушайте природный ландшафт. Соблюдайте правила "не оставлять следов".</dd>
+                    <dd class="rules-content__text">- Разводите костер только в разрешенных местах и следите, чтобы он был полностью потушен перед уходом.</dd>
+                    <dd class="rules-content__text">- Не отходите далеко от лагеря без предупреждения. Избегайте контакта с дикими животными.</dd>
+
+                    <dt class="rules-content__subtitle">5. Общие рекомендации</dt>
+                    <dd class="rules-content__text">- Убедитесь, что вы и ваши спутники готовы к физическим нагрузкам.</dd>
+                    <dd class="rules-content__text">- Пейте достаточно воды, чтобы поддерживать силы.</dd>
+                    <dd class="rules-content__text">- Уважайте других участников сплава и местных жителей, если маршрут проходит рядом с населенными пунктами.</dd>
+                </dl>
+
+                <p class="rules-content__warning text-accent">Соблюдение этих правил поможет сделать ваш сплав безопасным, комфортным и запоминающимся!</p>
+                <button class="rules-content__button button button--accent js-feedback">Записаться на сплав</button>
+            </div>
         </div>
     </div>
 </div>

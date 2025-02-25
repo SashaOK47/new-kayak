@@ -1,33 +1,41 @@
 <section class="certificate" id="certificate">
-    <div class="certificate__inner container">
-        <h2 class="certificate__title">сертификат</h2>
-        <p class="certificate__subtitle">Простое решение в выборе подарка — сертификат от Брест Каяк</p>
+    <div class="certificate__inner section-inner container">
+        <h2 class="certificate__title section-title">Сертификат</h2>
+        <p class="certificate__subtitle section-subtitle">Простое решение в выборе подарка — сертификат от <span class="text-accent">Брест Каяк</span></p>
         <div class="certificate__content">
             <div class="certificate__info">
-                <p class="certificate__info-text">
-                    <span>Сертификат на сплав</span> — хороший подарок на какой-либо праздник или день рождения приятелю, коллеге, близкому человеку. Владелец сертификата будет иметь возможность выбрать подходящий для него день, при этом учесть погодные условия.
-                </p>
-                <p class="certificate__info-title">Что входит в стоимость сертификата:</p>
-                <ul class="certificate__info-list">
-                    <li class="certificate__info-item">- прокат каяков(сапбордов) на кол-во чел. указанных в сертификате</li>
-                    <li class="certificate__info-item">- весла</li>
-                    <li class="certificate__info-item">- спасательный жилет</li>
-                    <li class="certificate__info-item">- гермоупаковки</li>
-                    <li class="certificate__info-item">- доставка снаряжения</li>
-                </ul>
-                <button class="button certificate__button js-feedback">заказать сертификат</button>
+                <div class="certificate__info-description">
+                    <p class="certificate__info-title text-accent">Ищете оригинальный и запоминающийся подарок?</p>
+                    <p class="certificate__info-text">
+                        Подарите незабываемые эмоции с нашим сертификатом на сплавы на каяках и сапбордах!
+                    </p>
+                    <p class="certificate__info-title text-accent">Преимущества сертификата:</p>
+                    <ul class="certificate__info-list">
+                        <li class="certificate__info-item">- Универсальный подарок — подходит для друзей, семьи, коллег или второй половинки.</li>
+                        <li class="certificate__info-item">- Гибкость — сертификат действует на любой маршрут и может быть использован в удобное время.</li>
+                        <li class="certificate__info-item">- Яркие впечатления — возможность насладиться природой, активным отдыхом и адреналином.</li>
+                    </ul>
+                    <p class="certificate__info-title text-accent">Почему выбирают наш сертификат:</p>
+                    <ul class="certificate__info-list">
+                        <li class="certificate__info-item">- Красивый дизайн, который можно персонализировать.</li>
+                        <li class="certificate__info-item">- Простота использования — достаточно предъявить сертификат при бронировании.</li>
+                        <li class="certificate__info-item">- Незабываемые впечатления, которые запомнятся надолго.</li>
+                    </ul>
+                </div>
+                <div class="certificate__info-image">
+                    <picture>
+                        <source srcset="img/certificate-bg.webp" type="image/webp">
+                        <img loading="lazy"  src="img/certificate-bg.png" width="202" height="368" alt="">
+                    </picture>
+                </div>
             </div>
-            <picture>
-                <source srcset="img/certificate.webp" type="image/webp">
-                <img
-                    class="certificate__image"
-                    loading="lazy"
-                    src="img/certificate.jpg"
-                    width="778"
-                    height="366"
-                    alt="Сертификат от Брест Каяк"
-                >
-            </picture>
+            <div class="certificate__image">
+                <picture>
+                    <source srcset="img/certificate.webp" type="image/webp">
+                    <img loading="lazy" src="img/certificate.jpg" width="778" height="366" alt="Сертификат от Брест Каяк">
+                </picture>
+            </div>
         </div>
+        <button class="button certificate__button button--accent js-feedback">Заказать сертификат</button>
     </div>
 </section>

@@ -5,6 +5,7 @@
     column-gap: rem(8);
   }
   &__link {
+    transition: var(--transition-duration);
     @include hover() {
       scale: 1.1;
     }

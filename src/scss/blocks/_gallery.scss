@@ -24,13 +24,9 @@
     grid-auto-flow: dense;
     margin-bottom: rem(48);
 
-    @media (max-width: rem(767)) {
+    @include mobile {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    //@media (max-width: rem(480)) {
-    //  grid-template-columns: 1fr;
-    //  //grid-auto-rows: 150px;
-    //}
   }
   &__item {
     overflow: hidden;
@@ -39,7 +35,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 
-    @media (max-width: rem(767)) {
+    @include mobile {
       display: none;
       &:nth-child(1) {
         display: block;
@@ -71,13 +67,13 @@
 
     &.tall {
       grid-row: span 2;
-      @media (max-width: rem(767)) {
+      @include mobile {
         grid-row: span 1;
       }
     }
     &.wide {
       grid-column: span 2;
-      @media (max-width: rem(767)) {
+      @include mobile {
         grid-column: span 1;
       }
     }
@@ -92,29 +88,20 @@
     }
   }
   &__button-more {
-    margin-inline: auto;
     display: none;
     position: relative;
-    height: 60px;
-    width: 220px;
-    background: var(--color-accent);
-    color: var(--color-dark);
-    //padding: 0.7em 1em;
-    cursor: pointer;
-    overflow: hidden;
-    @media (max-width: rem(767)) {
+    height: rem(56);
+    @include mobile {
       display: block;
     }
   }
   &__button-loader {
-    position: absolute;
-    height: 40px;
-    width: 40px;
+    @include square(rem(40));
+    @include abs-center;
+
+
     background: var(--color-light);
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     &::before {
       content: "";
       position: absolute;
@@ -162,7 +149,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
 
-    @media (max-width: rem(767)) {
+    @include mobile {
       grid-template-columns: 1fr;
       row-gap: 2rem;
     }
@@ -171,7 +158,7 @@
       display: flex;
       flex-direction: column;
       align-items: start;
-      @media (max-width: rem(767)) {
+      @include mobile {
         order: 1;
       }
     }
@@ -181,25 +168,19 @@
       align-items: start;
     }
     &-text {
-      @include fluid-text(20, 16);
-      font-weight: 700;
+      @include fluid-text(18, 16);
       max-width: rem(570);
-      margin-bottom: 2rem;
+      margin-bottom: var(--margin-bottom);
     }
     &-image {
       margin-bottom: 1rem;
     }
-    &-button {
-      margin-top: auto;
-    }
     &-more {
-      @include fluid-text(32, 24);
-
-      font-family: var(--font-family-accent);
+      @include fluid-text(24, 20);
       font-weight: 700;
-      color: var(--color-light);
-      text-shadow: var(--text-shadow);
+      color: var(--color-primary);
       margin-top: auto;
+      text-transform: uppercase;
     }
   }
 }

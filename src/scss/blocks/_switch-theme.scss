@@ -1,45 +1,44 @@
+@use "helpers" as *;
+
 .switch-theme {
   display: flex;
   justify-content: center;
-
   &__input {
+    appearance: none;
     position: absolute;
     visibility: hidden;
   }
-
   &__label {
     position: relative;
-    width: 60px;
-    height: 30px;
-    border: 2px solid var(--bg-indicate);
-    //border: 2px solid var(--color-accent);
-    border-radius: 35px;
+    width: rem(60);
+    height: rem(30);
+    border: 2px solid var(--color-primary);
+    border-radius: rem(35);
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: var(--transition-duration);
   }
-
   &__block {
     position: absolute;
     left: var(--left-position);
     transform: rotate(var(--rotate-angle));
-    transition: all 0.5s ease;
+    transition: var(--transition-duration);
   }
-
   &__indicator {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
+    width: rem(20);
+    height: rem(20);
     border-radius: 100%;
-    transition: background-color 1s ease;
-    background-color: var(--bg-indicate);
+    transition: var(--transition-duration);
+    background-color: var(--color-primary);
     cursor: pointer;
-
     svg {
       path {
         fill: var(--color-svg);
+        transition: var(--transition-duration);
       }
     }
   }

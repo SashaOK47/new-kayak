@@ -1,9 +1,9 @@
 import { sendMessage } from "../ui/sendMessage.js";
 import { maskPhone } from "../../utils/maskPhone.js";
 
-export const initForms = () => {
-    const forms = document.querySelectorAll('form');
+export const forms = document.querySelectorAll('form');
 
+export const initForms = () => {
     forms.forEach(form => {
         const formCheckbox = form.querySelector('input[type="checkbox"]');
         const formButton = form.querySelector('button');

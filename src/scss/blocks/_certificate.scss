@@ -1,61 +1,45 @@
 @use "../helpers" as *;
 
 .certificate {
-  &__inner {
-    padding-top: rem(40);
-    padding-bottom: rem(40);
-  }
-  &__subtitle {
-    @include fluid-text(20, 16);
-
-    margin-bottom: rem(48);
-    color: var(--text);
-  }
   &__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: rem(200);
-    color: var(--text);
-    @media (max-width: rem(980)) {
+    grid-template-columns: 60% 1fr;
+    gap: 2rem;
+    margin-bottom: var(--margin-bottom);
+    @include tablet {
       grid-template-columns: 1fr;
-      column-gap: 0;
-      row-gap: rem(48);
     }
   }
   &__info {
-    //background-image: url('../img/certificate-bg.png');
-    background-image: image-set(
-                    "../img/certificate-bg.webp"type("image/webp"),
-                    "../img/certificate-bg.png" type("image/png")
-    );
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: contain;
-    @media (max-width: rem(980)) {
-      order: 1;
-    }
-    @media (max-width: rem(480)) {
-      background-size: 50%;
-    }
-    &-text {
-      max-width: rem(400);
-      @include fluid-text(18, 16);
-      margin-bottom: rem(24);
-      span {
-        font-weight: 700;
-      }
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    @include mobile {
+      grid-template-columns: 1fr;
     }
     &-title {
       @include fluid-text(20, 18);
-      display: inline-block;
-      padding-inline: rem(4);
-      font-weight: 700;
-      background-color: var(--color-accent);
+      font-weight: 500;
       margin-bottom: rem(8);
-      color: var(--color-darken);
+    }
+    &-text {
+      color: var(--color-primary);
+      margin-bottom: rem(16);
     }
     &-list {
-      margin-bottom: rem(48);
+      &:not(:last-child) {
+        margin-bottom: rem(16);
+      }
+    }
+    &-image {
+      @include mobile {
+        justify-self: center;
+      }
+    }
+  }
+  &__image {
+    @include tablet {
+      justify-self: center;
     }
   }
 }

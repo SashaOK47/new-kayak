@@ -5,6 +5,7 @@
 @use "globals";
 
 // подключения компонентов страницы
+@use "./blocks/scrollbar";
 @use "./blocks/header";
 @use "./blocks/switch-theme";
 @use "./blocks/burger-menu";
@@ -12,8 +13,10 @@
 @use "./blocks/soc1als";
 @use "./blocks/phone";
 @use "./blocks/hero";
+@use "./blocks/table";
 @use "./blocks/route";
 @use "./blocks/boats";
+@use "./blocks/boat-card";
 @use "./blocks/work";
 @use "./blocks/gallery";
 @use "./blocks/certificate";
@@ -23,6 +26,8 @@
 @use "./blocks/form";
 @use "./blocks/footer";
 
-@use "./blocks/modal-feedback";
-@use "./blocks/modal-rules";
-@use "./blocks/modal-privacy";
+@use "./blocks/modal";
+@use "./blocks/rules-content";
+@use "./blocks/privacy-content";
+@use "./blocks/boat-content";
+@use "./blocks/agreement-content";

@@ -9,10 +9,10 @@
     flex-direction: column;
     align-items: end;
     font-size: rem(16);
-    color: var(--color-text);
+    color: var(--color-primary);
     font-weight: 600;
     white-space: nowrap;
-    transition: var(--transition-duration-hover);
+    transition: var(--transition-duration);
     @include hover() {
       color: var(--color-accent);
       transform: scale(1.05);
@@ -24,7 +24,7 @@
     padding-left: rem(14);
     position: relative;
     font-weight: 400;
-    color: var(--color-text);
+    color: var(--color-primary);
     transition: var(--transition-duration);
     &::before {
       @include square(rem(10));

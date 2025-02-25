@@ -1,98 +1,63 @@
 @use "helpers" as *;
 
 .work {
-  &__inner {
-    padding-top: rem(40);
-    padding-bottom: rem(40);
-  }
-  &__subtitle {
-    @include fluid-text(20, 16);
-
-    margin-bottom: rem(48);
-    color: var(--text);
-  }
   &__list {
-    margin-bottom: rem(48);
+    margin-bottom: var(--margin-bottom);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    @media (max-width: rem(1200)) {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: rem(767)) {
+    @include mobile-s {
       grid-template-columns: 1fr;
     }
   }
   &__item {
-    min-height: rem(220);
-    padding: 1.6rem;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    //background-size: 42%;
-    //box-shadow: var(--box-shadow);
-    //border-radius: var(--border-radius);
-    //background-color: var(--color-light);
-    backdrop-filter: blur(20px);
+    padding: rem(12);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-
-    &--one {
-      //background-image: url("../img/work-1.png");
-      background-image: image-set(
-                      "../img/work-1.webp"type("image/webp"),
-                      "../img/work-1.png" type("image/png")
-      );
+    background-color: var(--color-bg);
+    transition: var(--transition-duration);
+    border-radius: var(--border-radius-small);
+    @include laptop {
+      flex-direction: column;
+      align-items: center;
     }
-    &--two {
-      //background-image: url("../img/work-2.png");
-      background-image: image-set(
-                      "../img/work-2.webp"type("image/webp"),
-                      "../img/work-2.png" type("image/png")
-      );
+    @include mobile-s {
+      flex-direction: row;
+      align-items: start;
     }
-    &--three {
-      //background-image: url("../img/work-3.png");
-      background-image: image-set(
-                      "../img/work-3.webp"type("image/webp"),
-                      "../img/work-3.png" type("image/png")
-      );
-    }
-    &--four {
-      //background-image: url("../img/work-4.png");
-      background-image: image-set(
-                      "../img/work-4.webp"type("image/webp"),
-                      "../img/work-4.png" type("image/png")
-      );
-    }
-    &--five {
-      //background-image: url("../img/work-5.png");
-      background-image: image-set(
-                      "../img/work-5.webp"type("image/webp"),
-                      "../img/work-5.png" type("image/png")
-      );
-    }
-    &--six {
-      //background-image: url("../img/work-6.png");
-      background-image: image-set(
-                      "../img/work-6.webp"type("image/webp"),
-                      "../img/work-6.png" type("image/png")
-      );
+    &-info {
+      max-width: 60%;
+      @include laptop {
+        max-width: 100%;
+      }
+      @include mobile-s {
+        max-width: 60%;
+      }
     }
     &-title {
+      @include fluid-text(32, 20);
+      font-family: var(--font-family-accent);
+      white-space: nowrap;
       margin-bottom: rem(8);
-      font-size: rem(32);
       text-transform: uppercase;
       font-weight: 700;
-      color: var(--text);
+      color: var(--color-primary);
+      transition: var(--transition-duration);
     }
     &-text {
-      max-width: rem(220);
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      padding: rem(8);
-      border-radius: rem(10);
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      font-weight: 300;
+      color: var(--color-primary);
+      transition: var(--transition-duration);
+    }
+    &-time {
+      display: block;
+      font-weight: 500;
     }
   }
 }
