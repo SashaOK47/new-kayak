@@ -7,7 +7,7 @@
   z-index: 3;
   width: 100%;
   height: 100%;
-  background-color: var(--color-modal);
+  background-color: var(--color-dark-rgba);
   overflow: auto;
   display: none;
   justify-content: center;
@@ -62,35 +62,34 @@
   }
   &__inner {
     position: relative;
-    padding: 2rem;
-    background-color: var(--color-bg);;
-    color: var(--color-text);
+    padding: rem(40);
+    background-color: var(--bg-secondary);
+    color: var(--color-primary);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius-small);
     overflow: auto;
     max-width: 90%;
-    max-height: 75%;
+    max-height: 80%;
+    transition: var(--transition-duration);
     @include mobile {
       padding: 1rem;
     }
   }
   &__close {
+    @include square(rem(32));
     position: absolute !important;
     top: rem(8);
     right: rem(8);
-    width: rem(32);
-    height: rem(32);
     padding: 1rem;
-    background-color: var(--color-accent);
-    border-radius: 50%;
     border: none;
+    background-color: transparent;
     &-line {
       @include abs-center;
 
       display: inline-block;
       width: 80%;
       height: rem(2);
-      background-color: var(--color-light);
+      background-color: var(--color-primary);
 
       &:first-child {
         rotate: 45deg;

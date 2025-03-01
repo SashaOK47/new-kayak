@@ -3,33 +3,35 @@
 .boats {
   &__content {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     column-gap: 2rem;
     margin-bottom: var(--margin-bottom);
+    @include laptop {
+      grid-template-columns: 40% 1fr;
+    }
     @include tablet {
       grid-template-columns: 1fr;
     }
   }
   &__description {
     @include tablet {
-      margin-bottom: rem(32);
+      order: 1;
     }
   }
   &__image {
-    margin-bottom: rem(48);
+    margin-bottom: var(--margin-bottom);
   }
   &__info {
+    margin-bottom: var(--margin-bottom);
     &-text {
+      color: var(--color-primary);
+      transition: var(--transition-duration);
       &:first-of-type {
         margin-bottom: rem(8);
-        color: var(--color-primary);
-        transition: var(--transition-duration);
       }
       &:last-of-type {
         margin-bottom: rem(24);
-        color: var(--color-primary);
-        transition: var(--transition-duration);
       }
     }
     &-title {
@@ -40,8 +42,7 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: rem(20);
     @include tablet {
       margin-bottom: var(--margin-bottom);
@@ -51,7 +52,7 @@
       gap: rem(10);
     }
     @include mobile-s {
-      grid-template-columns: 80%;
+      grid-template-columns: 1fr;
     }
   }
 }

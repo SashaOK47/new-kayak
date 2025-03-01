@@ -2,41 +2,27 @@
 
 body {
   @include fluid-text(16, 14);
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), sans-serif;
   color: var(--color-primary);
-  background-image: var(--background-image);
+  background: var(--background);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  //transition: var(--transition-duration);
   overflow-x: hidden;
 
   &.no-scroll {
     overflow: hidden;
   }
 }
-a,
-button,
-label,
-input,
-textarea,
-select,
-svg * {
-  transition-duration: var(--transition-duration-hover);
-}
-
 a {
   color: inherit;
-
-  &[class] {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 :focus-visible {
-  outline: rem(2) solid var(--color-light);
+  outline: rem(2) solid var(--color-accent);
   outline-offset: rem(4);
   transition-duration: 0s !important;
 }
@@ -58,9 +44,9 @@ main {
 }
 
 section {
-  margin-bottom: rem(120);
+  margin-bottom: rem(60);
   @include mobile-s {
-    margin-bottom: rem(60);
+    margin-bottom: rem(40);
   }
 }
 .section-inner {
@@ -69,7 +55,7 @@ section {
 .section-title {
   @include fluid-text(48, 32);
 
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), sans-serif;
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1;
@@ -86,11 +72,6 @@ section {
 }
 .text-accent {
   color: var(--color-accent);
-}
-
-p {
-  color: var(--color-primary);
-  transition: var(--transition-duration);
 }
 
 

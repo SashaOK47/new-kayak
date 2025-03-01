@@ -1,7 +1,7 @@
 export const burgerMenu = () => {
     const burgerMenuButton = document.querySelector('.burger-menu');
     const headerOverlay = document.querySelector('.header__overlay');
-    const links = document.querySelectorAll('.header__menu-link');
+    const links = document.querySelectorAll('.menu__link');
 
 
     burgerMenuButton.addEventListener('click', () => {

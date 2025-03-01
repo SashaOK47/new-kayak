@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: 55% 1fr;
     column-gap: 1rem;
-    color: var(--text);
     @include laptop {
       grid-template-columns: 1fr;
       row-gap: 2rem;
@@ -27,24 +26,17 @@
   }
   &__info {
     &-title {
+      @include fluid-text(20, 16);
       font-weight: 500;
-      font-size: rem(18);
+      margin-bottom: rem(8);
     }
     &-text {
       color: var(--color-primary);
-      span {
-        font-weight: 500;
-        font-size: rem(18);
-      }
-      &:first-child {
-        margin-bottom: rem(8);
-      }
+      transition: var(--transition-duration);
+      margin-bottom: rem(8);
     }
     &-description {
       margin-top: rem(16);
-    }
-    &-title {
-      margin-bottom: rem(8);
     }
     &-list {
       display: flex;
@@ -52,7 +44,8 @@
       row-gap: rem(8);
     }
     &-item {
-      color: var(--color-text);
+      color: var(--color-primary);
+      transition: var(--transition-duration);
     }
   }
   &__image {
@@ -78,27 +71,20 @@
         border: none;
       }
     }
-    &-info {
-      p {
-        color: var(--color-primary);
-        margin: 0;
-        transition: var(--transition-duration);
-        &:first-child {
-          margin-bottom: rem(4);
-        }
-        span {
-          color: var(--color-accent);
-          font-weight: 500;
-        }
+    &-text {
+      color: var(--color-primary);
+      margin: 0;
+      transition: var(--transition-duration);
+      &:first-child {
+        margin-bottom: rem(4);
       }
     }
     &-link {
-      color: var(--color-accent);
-      font-weight: 500;
       transition: var(--transition-duration);
         @include hover() {
           transform: scale(1.05);
           text-shadow: var(--text-shadow);
+          color: var(--color-accent-hover);
         }
     }
 

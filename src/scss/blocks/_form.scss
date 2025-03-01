@@ -15,29 +15,30 @@
     }
   }
   &__input {
-    color: var(--color-dark);
+    color: var(--color-primary);
     padding: rem(16);
-    background-color: rgba(255,255,255,.8);
+    background-color: var(--color-input-rgba);
     width: 100%;
     border: none;
     border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
+
     &::placeholder {
-      color: var(--color-dark-rgba);
-      font-size: rem(18);
+      color: var(--color-gray);
     }
   }
   &__textarea {
     min-height: rem(112);
-    color: var(--color-dark);
+    color: var(--color-primary);
     padding: rem(16) rem(24);
     width: 100%;
     resize: none;
-    background-color: rgba(255,255,255,.8);
+    background-color: var(--color-input-rgba);
     border: none;
     border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
     &::placeholder {
-      color: var(--color-dark-rgba);
-      font-size: rem(18);
+      color: var(--color-gray);
     }
   }
   &__checkbox {
@@ -60,16 +61,13 @@
     }
   }
   &__fake-checkbox {
+    @include square(rem(24));
     margin-right: rem(12);
     display: inline-block;
-    width: rem(24);
-    height: rem(24);
     position: relative;
-    border: rem(2) solid transparent;
-    background-color: var(--color-light);
+    border: rem(1) solid var(--color-primary);
     cursor: pointer;
-    border-radius: 4px;
-    transition: .5s;
+    transition: var(--transition-duration);
     &::after, &::before {
       content: "";
       position: absolute;
@@ -80,7 +78,7 @@
       height: rem(2);
       background-color: var(--color-accent);
       opacity: 0;
-      transition: .5s;
+      transition: var(--transition-duration);
     }
     &::after {
       transform: translateY(-50%) rotate(45deg);
@@ -97,6 +95,7 @@
       color: var(--color-accent);
       transition: var(--transition-duration);
       @include hover() {
+        color: var(--color-accent-hover);
         transform: scale(1.05);
         text-shadow: var(--text-shadow);
       }
@@ -104,7 +103,7 @@
   }
   &__error {
     margin-top: .5rem;
-    color: red;
+    color: var(--color-error);
   }
   &--feedback {
     .form__label {
@@ -114,7 +113,7 @@
         display: flex;
         align-items: center;
       }
-      @media (max-width: rem(767)) {
+      @include mobile {
         width: 100%;
       }
     }

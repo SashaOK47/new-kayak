@@ -12,8 +12,8 @@
     position: relative;
     width: rem(60);
     height: rem(30);
-    border: 2px solid var(--color-primary);
-    border-radius: rem(35);
+    border: rem(2) solid var(--color-primary);
+    border-radius: var(--border-radius-large);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -26,18 +26,18 @@
     transition: var(--transition-duration);
   }
   &__indicator {
+    @include square(rem(20));
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: rem(20);
-    height: rem(20);
     border-radius: 100%;
     transition: var(--transition-duration);
     background-color: var(--color-primary);
     cursor: pointer;
     svg {
       path {
-        fill: var(--color-svg);
+        fill: var(--color-secondary);
         transition: var(--transition-duration);
       }
     }

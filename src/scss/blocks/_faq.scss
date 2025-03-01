@@ -4,7 +4,7 @@
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: rem(32);
+    column-gap: 3rem;
     margin-bottom: var(--margin-bottom);
     @include mobile {
       grid-template-columns: 1fr;
@@ -13,21 +13,25 @@
   &__accordion {
     margin-bottom: rem(32);
   }
-  &__image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include mobile {
-      order: -1;
-    }
-  }
   &__info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    //@media (max-width: rem(667)) {
-    //  order: 1;
-    //}
+    align-items: center;
+    &-title {
+      @include fluid-text(20, 18);
+
+      margin-bottom: rem(12);
+    }
+    &-text {
+      text-align: center;
+      color: var(--color-primary);
+      transition: var(--transition-duration);
+      margin-bottom: rem(32);
+    }
+    &-image {
+      @include mobile {
+        order: -1;
+      }
+    }
   }
 }

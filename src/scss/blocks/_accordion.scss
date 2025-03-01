@@ -2,11 +2,11 @@
 
 .accordion {
   &__item {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    margin: rem(10) 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--bg-secondary);
+    margin: rem(16) 0;
+    border-radius: var(--border-radius-small);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition-duration);
     &:first-child {
       margin-top: 0;
     }
@@ -25,31 +25,33 @@
     cursor: pointer;
     border: none;
     background: transparent;
-
-    &.active .accordion__control-icon {
-      rotate: 45deg;
-    }
     &-icon {
       @include square(rem(30));
 
       border-radius: 50%;
       display: inline-block;
-      background-color: #FB6406;
+      background-color: var(--color-accent);
       position: relative;
-      transition: rotate 0.2s ease-in-out;
+      transition: var(--transition-duration);
       &::before, &::after {
+        @include abs-center;
+
         content: "";
         height: rem(2);
         width: 70%;
-        background-color: var(--color-light);
-        @include abs-center;
+        background-color: #f9fefd;
       }
       &::before {
         rotate: 90deg;
       }
     }
+    &.active .accordion__control-icon {
+      rotate: 45deg;
+    }
     &-title {
+      color: var(--color-primary);
       text-align: left;
+      transition: var(transition-duration);
     }
   }
   &__body {
@@ -62,8 +64,7 @@
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid;
-    border-image: linear-gradient(to right, transparent, #fb6406, transparent)
-    1;
+    border-image: linear-gradient(to right, transparent, #fb6406, transparent) 1;
     &-title {
 
     }

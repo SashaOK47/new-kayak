@@ -25,11 +25,19 @@
     &-text {
       color: var(--color-primary);
       margin-bottom: rem(16);
+      transition: var(--transition-duration);
     }
     &-list {
       &:not(:last-child) {
         margin-bottom: rem(16);
       }
+    }
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+      color: var(--color-primary);
+      transition: var(--transition-duration);
     }
     &-image {
       @include mobile {

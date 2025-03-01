@@ -9,7 +9,7 @@ export  const sendMessageTelegramApi = async (message) => {
             },
             body: JSON.stringify({
                 chat_id: CHAT_ID,
-                parse_mode: 'html',
+                parse_mode: 'HTML',
                 text: message,
             })
         });

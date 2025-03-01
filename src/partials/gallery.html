@@ -117,16 +117,22 @@
                     </a>
                 </div>
             </div>
-            <button class="gallery__button-more button--accent button" type="button">Загрузить больше фото</button>
+            <button class="gallery__button-more button" type="button">Показать больше фото</button>
         </div>
 
         <div class="gallery__info">
             <div class="gallery__info-reservation">
-                <picture>
-                    <source srcset="img/gallery-img.webp" type="image/webp">
-                    <img class="gallery__info-image" loading="lazy" src="img/gallery-img.png" width="575" height="453" alt="">
-                </picture>
-                <p class="gallery__info-text">
+                <div class="gallery__info-description">
+                    <picture>
+                        <source srcset="img/gallery-img.webp" type="image/webp">
+                        <img class="gallery__info-image" loading="lazy" src="img/gallery-img.png" width="410" height="347" alt="">
+                    </picture>
+                    <p>
+                        <span class="text-accent">Каждый сплав</span> — это новые эмоции, яркие впечатления и незабываемые
+                        моменты. Присоединяйтесь к нам, чтобы окунуться в мир приключений!
+                    </p>
+                </div>
+                <p class="gallery__info-text text-accent">
                     Хотите оказаться на этих фотографиях? Забронируйте место в следующем сплаве прямо сейчас!
                 </p>
                 <button class="gallery__info-button button button--light js-feedback">Забронировать сплав</button>
@@ -134,14 +140,11 @@
             <div class="gallery__info-join">
                 <a class="gallery__info-link" href="https://www.instagram.com/kayak_brest" target="_blank" aria-label="Инстаграм" title="Инстаграм"
                 >
-                    <p class="gallery__info-text">
-                        Каждый сплав — это новые эмоции, яркие впечатления и незабываемые моменты.
-                        Присоединяйтесь к нам, чтобы окунуться в мир приключений!
-                    </p>
+
                     <span class="gallery__info-more">Больше фото и видео в <span class="text-accent">instagram</span></span>
                     <picture>
                         <source srcset="img/gallery.webp" type="image/webp">
-                        <img class="gallery__info-image" loading="lazy" src="img/gallery.png" width="647" height="482" alt="Перейти в инстаграм">
+                        <img class="gallery__info-image" loading="lazy" src="img/gallery.png" width="594" height="450" alt="Перейти в инстаграм">
                     </picture>
                 </a>
             </div>

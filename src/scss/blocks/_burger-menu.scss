@@ -11,13 +11,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding: rem(8.5) rem(4.25);
-    color: var(--color-primary);
     background-color: transparent;
     border: none;
-    transition: var(--transition-duration);
 
     &__line {
-      background-color: currentColor;
+      background-color: var(--color-primary);
       width: 100%;
       height: rem(2);
       transition: var(--transition-duration);

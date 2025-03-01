@@ -153,6 +153,9 @@
     align-items: center;
     justify-content: space-between;
     color: var(--text);
+    @include mobile-s {
+      flex-direction: column;
+    }
   }
   &__copyright {
     @include fluid-text(16, 14);

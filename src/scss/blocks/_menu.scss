@@ -1,0 +1,28 @@
+@use "helpers" as *;
+
+.menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__link {
+    display: inline-block;
+    padding: rem(10) rem(20);
+    white-space: nowrap;
+    color: var(--color-primary);
+    transition: var(--transition-duration);
+
+    @include mobile {
+      font-size: rem(24);
+      font-weight: 500;
+    }
+    @include hover() {
+      color: var(--color-accent-hover);
+      transform: scale(1.05);
+      text-shadow: var(--text-shadow);
+    }
+  }
+}

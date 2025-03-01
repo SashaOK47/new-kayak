@@ -6,12 +6,21 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
-    color: var(--text);
-    @media (max-width: rem(980)) {
+    @include mobile {
       grid-template-columns: 1fr;
     }
   }
+  &__image {
+    background-image: url('../img/feedback-bg.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
   &__info {
     max-width: rem(655);
+    &-text {
+      @include fluid-text(20, 18);
+      margin-bottom: rem(24);
+      text-align: center;
+    }
   }
 }

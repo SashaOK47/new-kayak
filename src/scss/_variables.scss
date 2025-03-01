@@ -1,39 +1,39 @@
 @use "helpers" as *;
 
 :root {
-  --color-dark: #000000;
-  --color-secondary: #fcce1d;
-  --linear-gradient-button: linear-gradient(45deg, #fcce1d, var(--color-accent));
-
-  --color-light: #ffffff;
   --color-primary: #4d4d4d;
-  --color-accent: #FB6406;
+  --color-secondary: #f9fefd;
+  --color-accent: #E26D2C;
+  --color-accent-hover: #43BCB8;
+  --color-gray: #ebebeb;
+  --color-online: #2bb84a;
+  --color-error: red;
+  --color-input-rgba: rgba(255, 255, 255, 0.5);
+  --color-dark-rgba: rgba(0, 0, 0, 0.8);
 
 
-  --color-gray: #dddddd;
-  --color-dark-rgba: rgba(0, 0, 0, 0.25);
-  --color-light-rgba: rgba(255, 255, 255, 0.25);
-  --color-modal: rgba(0, 0, 0, 0.7);
-  --color-bg: #C2E4FF;
+  --background: #f9fefd;
+  --bg-secondary: #f9fefd;
+  --text-shadow: #{rem(4)} #{rem(4)} #{rem(4)} rgba(0, 0, 0, 0.25);
+  --box-shadow: 0 #{rem(4)} #{rem(15)} rgba(77, 77, 77, .25);
+  --box-shadow-inset: inset #{rem(5)} 0 #{rem(5)} #{rem(-6)} rgba(77, 77, 77, .6);
+  --box-shadow-accent: 0 #{rem(4)} #{rem(15)} rgba(226, 109, 44, .5);
+  --box-shadow-light: 0 #{rem(4)} #{rem(15)} rgba(255, 255, 255, .5);
+  --box-shadow-hover: 0 #{rem(4)} #{rem(15)} rgba(67, 188, 184, .5);
 
 
 
-  --box-shadow: 0 #{rem(8)} #{rem(16)} rgba(255, 255, 255, 0.3);
-  --box-shadow-accent-color: 0 #{rem(4)} #{rem(15)} 0 rgba(251, 100, 6, 0.6);
-  --box-shadow-light-color: 0 #{rem(4)} #{rem(15)} 0 rgba(255, 255, 255, 0.6);
-  --border: #{rem(1)} solid var(--color-dark-rgba);
-
-
-
-
-
-
-
+  --border: #{rem(1)} solid #ebebeb;
   --border-radius-small: #{rem(8)};
   --border-radius-large: #{rem(35)};
+
+  --left-position: #{rem(4)};
+  --rotate-angle: 0deg;
   --transition-duration: .3s;
-  --font-family-base: "Oswald", sans-serif;
-  --font-family-accent: "Buyan", sans-serif;
+
+  --font-family-base: "Oswald";
+  --font-family-accent: "Buyan";
+
   --container-width: #{rem(1600)};
   --container-padding-x: #{rem(16)};
   --margin-bottom: #{rem(48)};
@@ -41,29 +41,17 @@
     --margin-bottom: #{rem(32)};
   }
 
-
-  // theme light
-  --background-image: url("../img/bg.jpg");
-  --text-shadow: #{rem(4)} #{rem(4)} #{rem(4)} rgba(0, 0, 0, 0.25);
-  --box-shadow-header: 0 0 #{rem(16)} 0 var(--color-dark);
-  --color-border: rgba(0, 0, 0, 0.25);
-
-  --left-position: #{rem(4)};
-  --rotate-angle: 0deg;
-
-  --color-svg: var(--color-light);
-  --color-burger: var(--color-darken);
 }
-// theme dark
+// DARK THEME
 :root[data-theme="dark"] {
-  --background-image: url("../img/night.png");
-  --text-shadow: #{rem(4)} #{rem(4)} #{rem(4)} rgba(255, 255, 255, 0.25);
-  --box-shadow-header: 0 0 #{rem(16)} 0 var(--color-light);
-  --color-primary: var(--color-light);
-  --color-border: rgba(255, 255, 255, 0.25);
+  --background: url("../img/night.png");
+  --color-primary: #f9fefd;
+  --color-secondary: #4d4d4d;
   --rotate-angle: 360deg;
   --left-position: #{rem(32)};
-  --color-svg: var(--color-dark);
-  --color-burger: var(--color-light);
-  --color-bg: #3d3d3d;
+  --box-shadow: 0 #{rem(4)} #{rem(15)} rgba(255, 255, 255, .25);
+  --text-shadow: #{rem(4)} #{rem(4)} #{rem(4)} rgba(255, 255, 255, 0.25);
+  --box-shadow-inset: inset #{rem(5)} 0 #{rem(5)} #{rem(-6)} rgba(255, 255, 255, .6);
+  --color-input-rgba: rgba(0, 0, 0, 0.5);
+  --bg-secondary: #1e1e1e;
 }

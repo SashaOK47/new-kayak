@@ -7,6 +7,9 @@
 // подключения компонентов страницы
 @use "./blocks/scrollbar";
 @use "./blocks/header";
+@use "./blocks/logo";
+@use "./blocks/menu";
+@use "./blocks/contacts";
 @use "./blocks/switch-theme";
 @use "./blocks/burger-menu";
 @use "./blocks/button";

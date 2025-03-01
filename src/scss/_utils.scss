@@ -9,13 +9,3 @@
 .visually-hidden {
   @include visually-hidden;
 }
-// Скрывать элемент на ширине 768px и менее
-.hidden-mobile {
-  @include mobile {
-    display: none !important;
-  }
-}
-// Скрывать элемент на ширине 768px и более
-.visible-mobile {
-  display: none !important;
-}
