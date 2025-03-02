@@ -26,7 +26,7 @@ export const sendMessage = async (form) => {
 
 
     try {
-        await sendMessageTelegramApi(messageText);
+        // await sendMessageTelegramApi(messageText);
         // Показать пользователю сообщение об успешной доставке
         successMessage();
         form.reset();

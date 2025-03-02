@@ -20,6 +20,8 @@
   --box-shadow-accent: 0 #{rem(4)} #{rem(15)} rgba(226, 109, 44, .5);
   --box-shadow-light: 0 #{rem(4)} #{rem(15)} rgba(255, 255, 255, .5);
   --box-shadow-hover: 0 #{rem(4)} #{rem(15)} rgba(67, 188, 184, .5);
+  --linear-gradien: linear-gradient(180deg, rgba(249, 254, 253, 0) 0%, #f9fefd 100%);
+  --linear-gradien-decor: linear-gradient(90deg, rgba(249, 254, 253, 0) 0%, #f9fefd 100%);;
 
 
 
@@ -54,4 +56,6 @@
   --box-shadow-inset: inset #{rem(5)} 0 #{rem(5)} #{rem(-6)} rgba(255, 255, 255, .6);
   --color-input-rgba: rgba(0, 0, 0, 0.5);
   --bg-secondary: #1e1e1e;
+  --linear-gradien: transparent;
+  --linear-gradien-decor: transparent;
 }

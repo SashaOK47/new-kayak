@@ -4,6 +4,7 @@
   &__info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 2rem;
     margin-bottom: rem(32);
     @include mobile {
@@ -16,18 +17,24 @@
       font-weight: 700;
       margin-bottom: rem(16);
     }
-  }
-  .table__td {
-    max-width: none;
-    &:last-child {
-      max-width: rem(250);
+    &-table {
+      max-width: rem(372);
+      td {
+        &:first-child {
+          max-width: rem(227);
+          width: 100%;
+        }
+      }
     }
   }
   &__description {
     display: flex;
     flex-direction: column;
-    gap: rem(8);
+    gap: rem(12);
     color: var(--color-primary);
     margin-bottom: var(--margin-bottom);
+  }
+  &__text {
+
   }
 }

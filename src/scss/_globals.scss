@@ -43,7 +43,7 @@ main {
   flex-grow: 1;
 }
 
-section {
+section, .hero {
   margin-bottom: rem(60);
   @include mobile-s {
     margin-bottom: rem(40);

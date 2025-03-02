@@ -1,13 +1,16 @@
 <section class="boats" id="boats">
   <div class="boats__inner section-inner container">
-    <h2 class="boats__title section-title">лодки</h2>
+    <h2 class="visually-hidden">Аренда лодок и сапбордов</h2>
+    <p class="boats__title section-title">Лодки</p>
     <p class="boats__subtitle section-subtitle">Аренда современного спортивного инвентаря</p>
     <div class="boats__content">
       <div class="boats__description">
-        <picture>
-          <source srcset="img/boats.webp" type="image/webp">
-          <img class="boats__image" loading="lazy" src="img/boats.png" width="652" height="469" alt="">
-        </picture>
+        <figure>
+          <picture class="boats__image">
+            <source srcset="img/boats.webp" type="image/webp">
+            <img loading="lazy" src="img/boats.png" width="652" height="469" alt="">
+          </picture>
+        </figure>
         <div class="boats__info">
           <p class="boats__info-text">
             Мы предлагаем аренду каяков и сапбордов для всех, кто хочет насладиться водными приключениями. Независимо
@@ -25,7 +28,7 @@
             </p>
           </div>
         </div>
-        <button class="button js-feedback">Забронировать</button>
+        <button class="button js-feedback" aria-label="Забронировать лодку или сапборд">Забронировать</button>
       </div>
       <ul class="boats__list">
         <li class="boats__item">
@@ -40,10 +43,13 @@
               </div>
             </div>
             <div class="boat-card__body">
-              <picture>
-                <source srcset="img/boat-1.webp" type="image/webp">
-                <img class="boat-card__image" loading="lazy" src="./img/boat-1.png" width="336" height="204" alt="Надувной каяк Itiwit X100+">
-              </picture>
+              <figure>
+                <figcaption class="visually-hidden">Надувной каяк Itiwit X100+</figcaption>
+                <picture class="boat-card__image">
+                  <source srcset="img/boat-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/boat-1.png" width="336" height="204" alt="Надувной каяк Itiwit X100+">
+                </picture>
+              </figure>
               <ul class="boat-card__list">
                 <li class="boat-card__item">Весла</li>
                 <li class="boat-card__item">Спасательный жилет</li>
@@ -52,7 +58,7 @@
               </ul>
             </div>
             <div class="boat-card__footer">
-              <button class="button button--big js-boat">Подробнее</button>
+              <button class="button button--big js-boat" aria-label="Подробнее о надувном каяке Itiwit X100+">Подробнее</button>
             </div>
           </article>
         </li>
@@ -68,10 +74,13 @@
               </div>
             </div>
             <div class="boat-card__body">
-              <picture>
-                <source srcset="img/boat-2.webp" type="image/webp">
-                <img class="boat-card__image" loading="lazy" src="./img/boat-2.png" width="336" height="204" alt="Надувной каяк Itiwit X100+">
-              </picture>
+              <figure class="boat-card__image">
+                <figcaption class="visually-hidden">Надувной каяк Itiwit X100+</figcaption>
+                <picture>
+                  <source srcset="img/boat-2.webp" type="image/webp">
+                  <img loading="lazy" src="./img/boat-2.png" width="336" height="204" alt="Надувной каяк Itiwit X100+">
+                </picture>
+              </figure>
               <ul class="boat-card__list">
                 <li class="boat-card__item">Весла</li>
                 <li class="boat-card__item">Спасательный жилет</li>
@@ -80,7 +89,7 @@
               </ul>
             </div>
             <div class="boat-card__footer">
-              <button class="button button--big js-boat">Подробнее</button>
+              <button class="button button--big js-boat" aria-label="Подробнее о надувном каяке Itiwit X100+">Подробнее</button>
             </div>
           </article>
         </li>
@@ -96,10 +105,13 @@
               </div>
             </div>
             <div class="boat-card__body">
-              <picture>
-                <source srcset="img/boat-3.webp" type="image/webp">
-                <img class="boat-card__image" loading="lazy" src="./img/boat-3.png" width="336" height="204" alt="Лучшая Сап доска Itiwit X100 10'">
-              </picture>
+              <figure class="boat-card__image">
+                <figcaption class="visually-hidden">Лучшая Сап доска Itiwit X100 10'</figcaption>
+                <picture>
+                  <source srcset="img/boat-3.webp" type="image/webp">
+                  <img loading="lazy" src="./img/boat-3.png" width="336" height="204" alt="Лучшая Сап доска Itiwit X100 10'">
+                </picture>
+              </figure>
               <ul class="boat-card__list">
                 <li class="boat-card__item">Весло</li>
                 <li class="boat-card__item">Спасательный жилет</li>
@@ -108,7 +120,7 @@
               </ul>
             </div>
             <div class="boat-card__footer">
-              <button class="button button--big js-boat">Подробнее</button>
+              <button class="button button--big js-boat" aria-label="Подробнее о лучшей сап доске Itiwit X100 10'">Подробнее</button>
             </div>
           </article>
         </li>
@@ -124,10 +136,13 @@
               </div>
             </div>
             <div class="boat-card__body">
-              <picture>
-                <source srcset="img/boat-4.webp" type="image/webp">
-                <img class="boat-card__image" loading="lazy" src="./img/boat-4.png" width="336" height="204" alt="Сапборд Itiwit X100 11' Синий">
-              </picture>
+              <figure class="boat-card__image">
+                <figcaption class="visually-hidden">Сапборд Itiwit X100 11' Синий</figcaption>
+                <picture>
+                  <source srcset="img/boat-4.webp" type="image/webp">
+                  <img loading="lazy" src="./img/boat-4.png" width="336" height="204" alt="Сапборд Itiwit X100 11' Синий">
+                </picture>
+              </figure>
               <ul class="boat-card__list">
                 <li class="boat-card__item">Весло</li>
                 <li class="boat-card__item">Спасательный жилет</li>
@@ -136,7 +151,7 @@
               </ul>
             </div>
             <div class="boat-card__footer">
-              <button class="button button--big js-boat">Подробнее</button>
+              <button class="button button--big js-boat" aria-label="Подробнее о сапборд Itiwit X100 11' Синий">Подробнее</button>
             </div>
           </article>
         </li>

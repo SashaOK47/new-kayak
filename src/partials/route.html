@@ -1,6 +1,7 @@
 <section class="route" id="route">
   <div class="route__inner section-inner container">
-    <h2 class="route__title section-title">Маршрут</h2>
+    <h2 class="visually-hidden">Маршрут сплава по реке Лесная</h2>
+    <p class="route__title section-title">Маршрут</p>
     <p class="route__subtitle section-subtitle">Сплавы проходят по реке Лесная</p>
     <div class="route__content">
       <div class="route__description">
@@ -25,12 +26,12 @@
           </div>
         </div>
         <div class="route__characteristics">
-          <div class="route__image">
+          <figure class="route__image">
             <picture>
-              <source srcset="./img/route.webp" type="image/webp" />
-              <img src="img/route.png" width="208" height="347" alt=""/>
+              <source srcset="./img/route.webp" type="image/webp">
+              <img src="img/route.png" width="208" height="347" loading="lazy" alt="">
             </picture>
-          </div>
+          </figure>
           <table class="route__table table">
             <tbody>
             <tr class="table__tr">
@@ -76,6 +77,6 @@
         </div>
       </div>
     </div>
-    <button class="button js-rules">Правила поведения на сплаве</button>
+    <button class="button js-rules" aria-label="Правила поведения на сплаве">Правила поведения на сплаве</button>
   </div>
 </section>
