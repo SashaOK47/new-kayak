@@ -1,25 +1,22 @@
 @use "helpers" as *;
 
 .footer {
-  background: var(--color-bg);
-  transition: var(--transition-duration);
+  border-top: var(--border);
   &__content {
     padding-block: rem(24);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     border-bottom: var(--border);
-    color: var(--color-primary);
-    transition: var(--transition-duration);
-    @media (max-width: rem(767)) {
+    @include mobile {
       grid-template-columns: 2fr 1fr;
     }
-    @media (max-width: rem(400)) {
+    @include mobile-s {
       grid-template-columns: 1fr;
     }
   }
   &__column {
-    @media (max-width: rem(400)) {
+    @include mobile-s {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,12 +32,16 @@
       font-weight: 700;
       margin-bottom: rem(8);
       text-transform: uppercase;
+      transition: var(--transition-duration);
     }
     &-text {
       max-width: rem(250);
       margin-bottom: var(--margin-bottom);
+      color: var(--color-primary);
+      transition: var(--transition-duration);
     }
-    @media (max-width: rem(400)) {
+
+    @include mobile-s {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,98 +55,52 @@
     &-link {
       display: inline-block;
       padding: rem(8) rem(16);
-      font-size: rem(18);
-      white-space: nowrap;
-      position: relative;
-      z-index: 1;
-      transition: var(--transition-duration);
-      &::before {
-        content: '';
-        border-radius: var(--border-radius-large);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--color-accent);
-        z-index: -1;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: var(--transition-duration);
-      }
-      @include hover() {
-        color: var(--color-light);
-        &::before {
-          transform: scaleX(1);
-          transform-origin: left;
-        }
-      }
-    }
-  }
-  &__contacts {
-
-  }
-  &__phone {
-    display: inline-flex;
-    flex-direction: column;
-    margin-bottom: rem(12);
-    &-link {
-      display: flex;
-      flex-direction: column;
       font-size: rem(16);
-      color: var(--color-primary);
-      font-weight: 600;
       white-space: nowrap;
+      color: var(--color-primary);
       transition: var(--transition-duration);
+
       @include hover() {
-        color: var(--color-accent);
+        color: var(--color-accent-hover);
         transform: scale(1.05);
         text-shadow: var(--text-shadow);
       }
     }
-    &-online {
-      font-size: rem(14);
-      padding-left: rem(14);
-      position: relative;
-      font-weight: 400;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        translate: 0 -50%;
-        display: inline-block;
-        width: rem(10);
-        height: rem(10);
-        background-color: #2bb84a;
-        border-radius: 50%;
-      }
-    }
-  }
-  &__soc1als {
-    margin-bottom: rem(12);
   }
   &__address {
     @include fluid-text(18, 16);
+    max-width: rem(350);
     margin-bottom: rem(8);
     color: var(--color-primary);
+    transition: var(--transition-duration);
   }
   &__link {
     margin-bottom: rem(16);
-    padding-inline: rem(6);
-    color: var(--color-primary);
+    color: var(--color-accent);
     font-weight: 500;
     transition: var(--transition-duration);
     @include hover() {
-      color: var(--color-accent);
+      color: var(--color-accent-hover);
       transform: scale(1.05);
       text-shadow: var(--text-shadow);
     }
   }
+  &__image {
+    margin-bottom: rem(12);
+  }
   &__work {
     @include fluid-text(20, 16);
+    color: var(--color-primary);
+    transition: var(--transition-duration);
   }
-  &__image {
+  &__contacts {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: rem(12);
+    @include mobile-s {
+      align-items: center;
+    }
   }
   &__bottom {
     padding-block: rem(16);
@@ -159,8 +114,22 @@
   }
   &__copyright {
     @include fluid-text(16, 14);
+    color: var(--color-primary);
+    transition: var(--transition-duration);
+  }
+  &__privacy, &__agreement {
+    @include fluid-text(16, 14);
+
+    color: var(--color-accent);
+    display: block;
+    transition: var(--transition-duration);
+    @include hover() {
+      color: var(--color-accent-hover);
+      transform: scale(1.05);
+      text-shadow: var(--text-shadow);
+    }
   }
   &__privacy {
-    @include fluid-text(16, 14);
+    margin-bottom: rem(4);
   }
 }

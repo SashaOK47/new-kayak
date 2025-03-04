@@ -1,13 +1,23 @@
 @use "helpers" as *;
 .soc1als {
   &__list {
+    background-color: rgba(158, 158, 158, .1);
+    border-radius: var(--border-radius-large);
+    padding: rem(12) rem(16);
     display: flex;
-    column-gap: rem(8);
+    column-gap: rem(20);
   }
   &__link {
     transition: var(--transition-duration);
+    svg {
+      transition: var(--transition-duration);
+      fill: var(--color-primary);
+    }
     @include hover() {
-      scale: 1.1;
+      svg {
+        fill: var(--color-accent-hover);
+          scale: 1.2;
+      }
     }
   }
 }

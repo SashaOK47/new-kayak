@@ -1,7 +1,45 @@
 @use "../helpers" as *;
 
 .form {
+  position: relative;
   width: 100%;
+  &__success {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    z-index: 1;
+    max-width: 350px;
+    width: 100%;
+    border-radius: var(--border-radius-small);
+    padding: rem(20);
+    background-color: var(--color-secondary);
+    box-shadow: var(--box-shadow);
+    scale: 0;
+    visibility: hidden;
+    transition: var(--transition-duration);
+    &.show {
+      scale: 1;
+      visibility: visible;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+    }
+    &-icon {
+      font-size: rem(50);
+      color: var(--color-green);
+    }
+    &-title {
+      font-size: rem(20);
+    }
+    &-text {
+      font-size: rem(18);
+    }
+  }
   &__label {
     display: block;
 
