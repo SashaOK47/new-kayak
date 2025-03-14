@@ -130,9 +130,10 @@
     font-weight: 500;
     display: inline-block;
     &-link {
-      color: var(--color-accent);
+      text-decoration: underline;
       transition: var(--transition-duration);
       @include hover() {
+        text-decoration: none;
         color: var(--color-accent-hover);
         transform: scale(1.05);
         text-shadow: var(--text-shadow);

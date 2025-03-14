@@ -102,9 +102,14 @@
   &--feedback {
     z-index: 4;
     .modal__inner {
-      background-image: url('../img/modal-feedback.png');
-      background-repeat: no-repeat;
-      background-position: bottom right;
+      position: relative;
+    }
+    .modal__image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: .2;
     }
   }
   &--rules {

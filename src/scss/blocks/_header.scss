@@ -26,6 +26,7 @@
   }
   &__overlay {
     display: contents;
+    position: relative;
     @include mobile {
       position: fixed;
       top: 0;
@@ -38,9 +39,9 @@
       justify-content: center;
       row-gap: 3rem;
       padding: rem(24);
-      background-image: url("../img/menu.png");
-      background-position: bottom right;
-      background-repeat: no-repeat;
+      //background-image: url("../img/menu.png");
+      //background-position: bottom right;
+      //background-repeat: no-repeat;
       background-color: var(--bg-secondary);
       box-shadow: var(--box-shadow-inset);
       transition: var(--transition-duration);
@@ -54,6 +55,16 @@
       @include mobile-s {
         width: 100%;
       }
+    }
+  }
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: -1;
+    @include mobile {
+      display: block;
     }
   }
 }
